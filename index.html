@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Groupweb</title>
+
+        <!-- Load jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+
+        <!-- Load ScrollTo -->
+        <script src="http://flesler-plugins.googlecode.com/files/jquery.scrollTo-1.4.2-min.js"></script>
+
+        <!-- Load LocalScroll -->
+        <script src="http://flesler-plugins.googlecode.com/files/jquery.localscroll-1.2.7-min.js"></script>
+
+        <!-- Some CSS -->
+        <style type="text/css">
+
+        /* CSS for the small boxes that will scroll inside a div */
+
+        body {
+                background-color: #999;
+                background-repeat:no-repeat;
+                background-position:center;
+        }
+
+        #theory-viewer {
+                border: 1px solid black;
+                margin: 10px auto;
+                width: 800px;
+                height: 600px;
+                overflow: hidden;
+        }
+
+        #theory-container {
+                width: 5600px;
+        }
+
+        .theory-column {
+                width: 800px;
+                float: left;
+        }
+
+        .theory-section {
+                color: #000;
+                width: 800px;
+                height: 600px;
+                border: 1px solid black;
+                background:rgba(255,255,255,0.7);
+        }
+
+        .overview {
+
+        }
+
+
+        .people {
+
+        }
+
+        .problems {
+
+        }
+
+        .methods {
+
+        }
+
+        </style>
+
+        <!-- javascript that will initiate jQuery and the LocalScroll plugin -->
+        <script>
+
+        // When the document is loaded...
+    $(document).ready(function()
+        {
+
+                // Scroll the content inside the #scroll-container div
+                $.localScroll({
+                   target:'#theory-viewer',
+                   axis: 'xy'
+                });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+<h1>Groupweb</h1>
+
+<div id="theory-links">
+
+        <a href="#intro">Intro</a>
+        <a href="#cognitive-science">Cognitive Science</a>
+        <a href="#distributed-cognition">Distributed Cognition</a>
+        <a href="#actor-network-theory">Actor-Network Theory</a>
+        <a href="#activity-theory">Activity Theory</a>
+        <a href="#semiotics">Semiotics</a>
+        <a href="#social-psychology">Social Psychology</a>
+
+
+</div>
+
+
+
+<div id="theory-viewer">
+
+<div id="theory-container">
+
+<div class="theory-column" id="Intro">
+
+        <div id="intro" class="theory-section overview">
+                Intro to Theory
+                <a href="#cognitive-science-overview">Continue</a>
+        </div>
+
+</div>
+
+
+<div class="theory-column" id="cognitive-science">
+
+        <div id="cognitive-science-overview" class="theory-section overview">
+                Cognitive Science
+                <a href="#intro">Left</a>
+                <a href="#distributed-cognition-overview">Right</a>
+                <a href="#cognitive-science-people">Down</a>
+        </div>
+
+        <div id="cognitive-science-people" class="theory-section people">
+                People
+                <a href="#cognitive-science-overview">Up</a>
+                <a href="#intro">Left</a>
+                <a href="#distributed-cognition-people">Right</a>
+                <a href="#cognitive-science-problems">Down</a>
+        </div>
+
+        <div id="cognitive-science-problems" class="theory-section problems">
+                Problems
+                <a href="#cognitive-science-people">Up</a>
+                <a href="#intro">Left</a>
+                <a href="#distributed-cognition-problems">Right</a>
+                <a href="#cognitive-science-methods">Down</a>
+        </div>
+
+        <div id="cognitive-science-methods" class="theory-section methods">
+                Methods
+                <a href="#cognitive-science-problems">Up</a>
+                <a href="#intro">Left</a>
+                <a href="#distributed-cognition-methods">Right</a>
+        </div>
+
+</div>
+
+
+<div class="theory-column" id="distributed-cognition">
+
+        <div id="distributed-cognition-overview" class="theory-section overview">
+                Distributed Cognition
+                <a href="#cognitive-science-overview">Left</a>
+                <a href="#actor-network-theory-overview">Right</a>
+                <a href="#distributed-cognition-people">Down</a>
+        </div>
+
+        <div id="distributed-cognition-people" class="theory-section people">
+                People
+                <a href="#distributed-cognition-overview">Up</a>
+                <a href="#cognitive-science-people">Left</a>
+                <a href="#actor-network-theory-people">Right</a>
+                <a href="#distributed-cognition-problems">Down</a>
+        </div>
+
+        <div id="distributed-cognition-problems" class="theory-section problems">
+                Problems
+                <a href="#distributed-cognition-people">Up</a>
+                <a href="#cognitive-science-problems">Left</a>
+                <a href="#actor-network-theory-problems">Right</a>
+                <a href="#distributed-cognition-methods">Down</a>
+        </div>
+
+        <div id="distributed-cognition-methods" class="theory-section methods">
+                Methods
+                <a href="#distributed-cognition-problems">Up</a>
+                <a href="#cognitive-science-methods">Left</a>
+                <a href="#actor-network-theory-methods">Right</a>
+        </div>
+
+</div>
+
+
+<div class="theory-column" id="actor-network-theory">
+
+        <div id="actor-network-theory-overview" class="theory-section overview">Actor-Network Theory</div>
+        <div id="actor-network-theory-people" class="theory-section people">People</div>
+        <div id="actor-network-theory-problems" class="theory-section problems">Problems</div>
+        <div id="actor-network-theory-methods" class="theory-section methods">Methods</div>
+
+</div>
+
+
+
+<div class="theory-column" id="activity-theory">
+
+        <div id="activity-theory-overview" class="theory-section overview">Activity Theory</div>
+        <div id="activity-theory-people" class="theory-section people">People</div>
+        <div id="activity-theory-problems" class="theory-section problems">Problems</div>
+        <div id="activity-theory-methods" class="theory-section methods">Methods</div>
+
+</div>
+
+
+
+<div class="theory-column" id="semiotics">
+
+        <div id="semiotics-overview" class="theory-section overview">Semiotics</div>
+        <div id="semiotics-people" class="theory-section people">People</div>
+        <div id="semiotics-problems" class="theory-section problems">Problems</div>
+        <div id="semiotics-methods" class="theory-section methods">Methods</div>
+
+</div>
+
+
+
+<div class="theory-column" id="social-psychology">
+
+        <div id="social-psychology-overview" class="theory-section overview">Social Psychology</div>
+        <div id="social-psychology-people" class="theory-section people">People</div>
+        <div id="social-psychology-problems" class="theory-section problems">Problems</div>
+        <div id="social-psychology-methods" class="theory-section methods">Methods</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
