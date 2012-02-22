@@ -22,15 +22,18 @@
         /* CSS for the small boxes that will scroll inside a div */
 
         body {
-                background-image: url('http://optionotter.files.wordpress.com/2011/11/2004-05-08-026.jpg');
+                //background-image: url('http://optionotter.files.wordpress.com/2011/11/2004-05-08-026.jpg');
                 background-repeat:no-repeat;
                 background-position:center;
+		font-family: helvetica, arial, sans-serrif;
         }
 
+
+
         #theory-viewer {
-                //border: 1px solid black;
+                //border: 1px solid gray;
                 margin: 10px auto;
-                width: 800px;
+                width: 1000px;
                 height: 600px;
                 overflow: hidden;
         }
@@ -40,21 +43,44 @@
         }
 
 	#theory-links {
-		margin: 10px auto;
+
 	}
+
+	#theory-links ul{
+		width: 1000px;
+		margin: auto;
+		list-style: none;
+
+	}
+
+	#theory-links li{
+		float: left;
+		padding: 0px 13px;
+	}
+
+
+	#theory-links a {
+		color: gray;
+		text-decoration: none;
+	}
+
+	#theory-links a:hover {
+		color: black;
+	}
+
 
         .theory-column {
                 width: 800px;
                 float: left;
-		margin-right: 600px;
+		margin-right: 500px;
         }
 
         .theory-section {
 		position: relative;
                 color: #000;
-                width: 700px;
+                width: 900px;
                 height: 580px;
-		margin-bottom: 600px;
+		margin-bottom: 250px;
 		padding: 10px 50px;
                 background:rgba(255,255,255,0.7);
         }
@@ -62,46 +88,54 @@
 	.arrow-left {
 		position: absolute;
 		left: 5px;
-		top: 300px;
+		top: 287px;
 		z-index: 2;
 	}
 
 	.arrow-right {
 		position: absolute;
 		right: 5px;
-		top: 300px;
+		top: 287px;
 		z-index: 2;
 	}
 
 	.arrow-up {
 		position: absolute;
-		left: 400px;
+		left: 487px;
 		top: 5px;
 		z-index: 2;
 	}
 
 	.arrow-down {
 		position: absolute;
-		left: 400px;
+		left: 487px;
 		bottom: 5px;
 		z-index: 2;
 	}
 
         .overview {
-
+		background-image: url("idea.png");
+		background-repeat: no-repeat;
+		background-position: 95% 80% ;
         }
 
 
         .people {
-
+		background-image: url("people.png");
+		background-repeat: no-repeat;
+		background-position: 90% 80% ;
         }
 
         .problems {
-
+		background-image: url("problem.png");
+		background-repeat: no-repeat;
+		background-position: 95% 80% ;
         }
 
         .methods {
-
+		background-image: url("method.png");
+		background-repeat: no-repeat;
+		background-position: 95% 80% ;
         }
 
         </style>
@@ -125,8 +159,6 @@
 </head>
 
 <body>
-
-<h1>Groupweb</h1>
 
 <div id="theory-viewer">
 
@@ -154,7 +186,7 @@
         </div>
 
         <div id="cognitive-science-people" class="theory-section people">
-                People
+                <h1>People</h1>
                 <a href="#cognitive-science-overview"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#intro"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#distributed-cognition-people"><img src="arrow_right.png" class="arrow-right"></a>
@@ -162,7 +194,7 @@
         </div>
 
         <div id="cognitive-science-problems" class="theory-section problems">
-                Problems
+                <h1>Problems</h1>
                 <a href="#cognitive-science-people"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#intro"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#distributed-cognition-problems"><img src="arrow_right.png" class="arrow-right"></a>
@@ -170,7 +202,7 @@
         </div>
 
         <div id="cognitive-science-methods" class="theory-section methods">
-                Methods
+                <h1>Methods</h1>
                 <a href="#cognitive-science-problems"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#intro"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#distributed-cognition-methods"><img src="arrow_right.png" class="arrow-right"></a>
@@ -182,14 +214,14 @@
 <div class="theory-column" id="distributed-cognition">
 
         <div id="distributed-cognition-overview" class="theory-section overview">
-                Distributed Cognition
+                <h1>Distributed Cognition</h1>
                 <a href="#cognitive-science-overview"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#actor-network-theory-overview"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#distributed-cognition-people"><img src="arrow_down.png" class="arrow-down"></a>
         </div>
 
         <div id="distributed-cognition-people" class="theory-section people">
-                People
+                <h1>People</h1>
                 <a href="#distributed-cognition-overview"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#cognitive-science-people"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#actor-network-theory-people"><img src="arrow_right.png" class="arrow-right"></a>
@@ -197,7 +229,7 @@
         </div>
 
         <div id="distributed-cognition-problems" class="theory-section problems">
-                Problems
+                <h1>Problems</h1>
                 <a href="#distributed-cognition-people"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#cognitive-science-problems"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#actor-network-theory-problems"><img src="arrow_right.png" class="arrow-right"></a>
@@ -205,7 +237,7 @@
         </div>
 
         <div id="distributed-cognition-methods" class="theory-section methods">
-                Methods
+                <h1>Methods</h1>
                 <a href="#distributed-cognition-problems"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#cognitive-science-methods"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#actor-network-theory-methods"><img src="arrow_right.png" class="arrow-right"></a>
@@ -217,14 +249,14 @@
 <div class="theory-column" id="actor-network-theory">
 
         <div id="actor-network-theory-overview" class="theory-section overview">
-		Actor-Network Theory
+		<h1>Actor-Network Theory</h1>
                 <a href="#distributed-cognition-overview"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#activity-theory-overview"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#actor-network-theory-people"><img src="arrow_down.png" class="arrow-down"></a>
 	</div>
         
 	<div id="actor-network-theory-people" class="theory-section people">
-		People
+		<h1>People</h1>
                 <a href="#actor-network-theory-overview"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#distributed-cognition-people"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#activity-theory-people"><img src="arrow_right.png" class="arrow-right"></a>
@@ -232,7 +264,7 @@
 	</div>
         
 	<div id="actor-network-theory-problems" class="theory-section problems">
-		Problems
+		<h1>Problems</h1>
                 <a href="#actor-network-theory-people"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#distributed-cognition-problems"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#activity-theory-problems"><img src="arrow_right.png" class="arrow-right"></a>
@@ -240,7 +272,7 @@
 	</div>
         
 	<div id="actor-network-theory-methods" class="theory-section methods">
-		Methods
+		<h1>Methods</h1>
                 <a href="#actor-network-theory-problems"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#distributed-cognition-methods"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#activity-theory-methods"><img src="arrow_right.png" class="arrow-right"></a>
@@ -253,27 +285,27 @@
 <div class="theory-column" id="activity-theory">
 
         <div id="activity-theory-overview" class="theory-section overview">
-		Activity Theory
+		<h1>Activity Theory</h1>
                 <a href="#actor-network-theory-overview"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#semiotics-overview"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#activity-theory-people"><img src="arrow_down.png" class="arrow-down"></a>
 </div>
         <div id="activity-theory-people" class="theory-section people">
-		People
+		<h1>People</h1>
                 <a href="#activity-theory-overview"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#actor-network-theory-people"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#semiotics-people"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#activity-theory-problems"><img src="arrow_down.png" class="arrow-down"></a>
 </div>
         <div id="activity-theory-problems" class="theory-section problems">
-		Problems
+		<h1>Problems</h1>
                 <a href="#activity-theory-people"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#actor-network-theory-problems"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#semiotics-problems"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#activity-theory-methods"><img src="arrow_down.png" class="arrow-down"></a>
 </div>
         <div id="activity-theory-methods" class="theory-section methods">
-		Methods
+		<h1>Methods</h1>
                 <a href="#activity-theory-problems"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#actor-network-theory-methods"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#semiotics-methods"><img src="arrow_right.png" class="arrow-right"></a>
@@ -286,27 +318,27 @@
 <div class="theory-column" id="semiotics">
 
         <div id="semiotics-overview" class="theory-section overview">
-		Semiotics
+		<h1>Semiotics</h1>
                 <a href="#activity-theory-overview"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-overview"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#semiotics-people"><img src="arrow_down.png" class="arrow-down"></a>
 	</div>
         <div id="semiotics-people" class="theory-section people">
-		People
+		<h1>People</h1>
                 <a href="#semiotics-overview"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#activity-theory-people"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-people"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#semiotics-problems"><img src="arrow_down.png" class="arrow-down"></a>
 	</div>
         <div id="semiotics-problems" class="theory-section problems">
-		Problems
+		<h1>Problems</h1>
                 <a href="#semiotics-people"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#activity-theory-problems"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-problems"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#semiotics-methods"><img src="arrow_down.png" class="arrow-down"></a>
 	</div>
         <div id="semiotics-methods" class="theory-section methods">
-		Methods
+		<h1>Methods</h1>
                 <a href="#semiotics-problems"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#activity-theory-methods"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-methods"><img src="arrow_right.png" class="arrow-right"></a>
@@ -319,24 +351,24 @@
 <div class="theory-column" id="social-psychology">
 
         <div id="social-psychology-overview" class="theory-section overview">
-		Social Psychology
+		<h1>Social Psychology</h1>
                 <a href="#semiotics-overview"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-people"><img src="arrow_down.png" class="arrow-down"></a>
 	</div>
         <div id="social-psychology-people" class="theory-section people">
-		People
+		<h1>People</h1>
                 <a href="#social-psychology-overview"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#semiotics-people"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-problems"><img src="arrow_down.png" class="arrow-down"></a>
 	</div>
         <div id="social-psychology-problems" class="theory-section problems">
-		Problems
+		<h1>Problems</h1>
                 <a href="#social-psychology-people"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#semiotics-problems"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-methods"><img src="arrow_down.png" class="arrow-down"></a>
 	</div>
         <div id="social-psychology-methods" class="theory-section methods">
-		Methods
+		<h1>Methods</h1>
                 <a href="#social-psychology-problems"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#semiotics-methods"><img src="arrow_left.png" class="arrow-left"></a>
 	</div>
@@ -350,17 +382,19 @@
 </div>
 
 
-<div id="theory-links">
+<div id="theory-links" align="center">
 
-        <a href="#intro">Intro</a>
-        <a href="#cognitive-science">Cognitive Science</a>
-        <a href="#distributed-cognition">Distributed Cognition</a>
-        <a href="#actor-network-theory">Actor-Network Theory</a>
-        <a href="#activity-theory">Activity Theory</a>
-        <a href="#semiotics">Semiotics</a>
-        <a href="#social-psychology">Social Psychology</a>
+	<ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#cognitive-science">Cognitive Science</a></li>
+        <li><a href="#distributed-cognition">Distributed Cognition</a></li>
+        <li><a href="#actor-network-theory">Actor-Network Theory</a></li>
+        <li><a href="#activity-theory">Activity Theory</a></li>
+        <li><a href="#semiotics">Semiotics</a></li>
+        <li><a href="#social-psychology">Social Psychology</a></li>
+	</ul>
 
-	<p>Background Image: Phil Russell at optionotter.com</p>
+	<!--<p style="float:right;">Background Image: Phil Russell at optionotter.com</p>-->
 
 </div>
 
