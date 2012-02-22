@@ -23,8 +23,11 @@
 
         body {
                 //background-image: url('http://optionotter.files.wordpress.com/2011/11/2004-05-08-026.jpg');
+				/*
                 background-repeat:no-repeat;
-                background-position:center;
+                background-position:center;*/
+				background-image:url('rockbg.png');
+				background-repeat:repeat-xy;
 		font-family: helvetica, arial, sans-serrif;
         }
 
@@ -82,8 +85,22 @@
                 height: 580px;
 		margin-bottom: 250px;
 		padding: 10px 50px;
-                background:rgba(255,255,255,0.7);
+            /*    background:rgba(255,255,255,0.7);*/
         }
+		
+		.card {
+				width:800px;
+				height:520px;
+				border: 1px solid #ccc;
+				padding: 10px 50px;
+				background-color: #fff;
+			}
+		
+	.shadow {
+		-moz-box-shadow: 3px 3px 10px #4a4a4a;
+        -webkit-box-shadow: 3px 3px 10px #4a4a4a;
+        box-shadow: 3px 3px 10px #4a4a4a;
+	}
 
 	.arrow-left {
 		position: absolute;
@@ -178,8 +195,10 @@
 
 <div class="theory-column" id="cognitive-science">
 
-        <div id="cognitive-science-overview" class="theory-section overview">
+        <div id="cognitive-science-overview" class="theory-section">
+		<div class="card overview shadow">
                 <h1>Cognitive Science</h1>
+				</div>
                 <a href="#intro"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#distributed-cognition-overview"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#cognitive-science-people"><img src="arrow_down.png" class="arrow-down"></a>
