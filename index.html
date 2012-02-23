@@ -16,19 +16,23 @@
         <!-- Load LocalScroll -->
         <script src="http://flesler-plugins.googlecode.com/files/jquery.localscroll-1.2.7-min.js"></script>
 
+
+
+
+
+
+
         <!-- Some CSS -->
         <style type="text/css">
 
         /* CSS for the small boxes that will scroll inside a div */
 
         body {
-                //background-image: url('http://optionotter.files.wordpress.com/2011/11/2004-05-08-026.jpg');
-                background-repeat:no-repeat;
+                background-image: url('library.jpg');
+                background-repeat:repeat;
                 background-position:center;
 		font-family: helvetica, arial, sans-serrif;
         }
-
-
 
         #theory-viewer {
                 //border: 1px solid gray;
@@ -43,12 +47,12 @@
         }
 
 	#theory-links {
-
+                background:rgba(255,255,255,0.8);
 	}
 
 	#theory-links ul{
 		width: 1000px;
-		margin: auto;
+		margin: 0px auto;
 		list-style: none;
 
 	}
@@ -60,7 +64,7 @@
 
 
 	#theory-links a {
-		color: gray;
+		color: white;
 		text-decoration: none;
 	}
 
@@ -82,7 +86,7 @@
                 height: 580px;
 		margin-bottom: 250px;
 		padding: 10px 50px;
-                background:rgba(255,255,255,0.7);
+                background:rgba(255,255,255,0.8);
         }
 
 	.arrow-left {
@@ -140,8 +144,58 @@
 
         </style>
 
-        <!-- javascript that will initiate jQuery and the LocalScroll plugin -->
+
+
+
+
         <script>
+
+
+function scrollL() {
+	scrollTop=$("#theory-viewer").scrollTop();
+	scrollLeft=$("#theory-viewer").scrollLeft();
+	if (scrollLeft < 1300){
+	  return false;
+	}
+	else {
+	$("#theory-viewer").scrollTo({top:scrollTop, left:scrollLeft-1300}, 800);
+	}
+}
+
+
+function scrollU() {
+	scrollTop=$("#theory-viewer").scrollTop();
+	scrollLeft=$("#theory-viewer").scrollLeft();
+	if (scrollTop < 850){
+	  return false;
+	}
+	else {
+	$("#theory-viewer").scrollTo({top:scrollTop-850, left:scrollLeft}, 800);
+	}
+}
+
+
+function scrollR() {
+	scrollTop=$("#theory-viewer").scrollTop();
+	scrollLeft=$("#theory-viewer").scrollLeft();
+	if (scrollLeft > 5*1300){
+	  return false;
+	}
+	else {
+	$("#theory-viewer").scrollTo({top:scrollTop, left:scrollLeft+1300}, 800);
+}
+	}
+
+function scrollD() {
+	scrollTop=$("#theory-viewer").scrollTop();
+	scrollLeft=$("#theory-viewer").scrollLeft();
+	if (scrollTop > 2*850){
+	  return false;
+	}
+	else {
+	$("#theory-viewer").scrollTo({top:scrollTop+850, left:scrollLeft}, 800);
+	}
+}
 
         // When the document is loaded...
     $(document).ready(function()
@@ -153,12 +207,63 @@
                    axis: 'xy'
                 });
 
-        });
+	//Catch keypress events for arrow keys
+  $(document).keydown(function (evt) {
+    if (evt.keyCode == 37) { // left arrow
+      evt.preventDefault(); // prevents the usual scrolling behaviour
+      scrollL(); // scroll to the next new heading instead
+    }
+
+    if (evt.keyCode == 38) { // up arrow
+      evt.preventDefault(); // prevents the usual scrolling behaviour
+      scrollU(); // scroll to the next new heading instead
+    }
+
+    if (evt.keyCode == 39) { // right arrow
+      evt.preventDefault(); // prevents the usual scrolling behaviour
+      scrollR(); // scroll to the next new heading instead
+    }
+
+    if (evt.keyCode == 40) { // down arrow
+      evt.preventDefault(); // prevents the usual scrolling behaviour
+      scrollD(); // scroll to the next new heading instead
+    }
+
+  });
+
+
+	});
+
+
     </script>
+
+
+
+
+
+
+
+
 
 </head>
 
 <body>
+
+<div id="theory-links" align="center">
+
+	<ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#cognitive-science">Cognitive Science</a></li>
+        <li><a href="#distributed-cognition">Distributed Cognition</a></li>
+        <li><a href="#actor-network-theory">Actor-Network Theory</a></li>
+        <li><a href="#activity-theory">Activity Theory</a></li>
+        <li><a href="#semiotics">Semiotics</a></li>
+        <li><a href="#social-psychology">Social Psychology</a></li>
+	</ul>
+
+	<!--<p style="float:right;">Background Image: Phil Russell at optionotter.com</p>-->
+
+</div>
 
 <div id="theory-viewer">
 
@@ -171,7 +276,17 @@
 
 		<p>Here is a description of why we have created this project. Namely, to describe what theory does for the field of HCI.</p>
                 <a href="#cognitive-science-overview"><img src="arrow_right.png" class="arrow-right"></a>
+		<a href="#major-figures"><img src="arrow_down.png" class="arrow-down"></a>
         </div>
+
+        <div id="major-figures" class="theory-section people">
+                <h1>Major Figures</h1>
+
+		<p>Here is a description of the major figures.</p>
+                <a href="#intro"><img src="arrow_up.png" class="arrow-up"></a>
+                <a href="#cognitive-science-people"><img src="arrow_right.png" class="arrow-right"></a>
+        </div>
+
 
 </div>
 
@@ -188,7 +303,7 @@
         <div id="cognitive-science-people" class="theory-section people">
                 <h1>People</h1>
                 <a href="#cognitive-science-overview"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#intro"><img src="arrow_left.png" class="arrow-left"></a>
+                <a href="#major-figures"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#distributed-cognition-people"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#cognitive-science-problems"><img src="arrow_down.png" class="arrow-down"></a>
         </div>
@@ -382,21 +497,7 @@
 </div>
 
 
-<div id="theory-links" align="center">
 
-	<ul>
-        <li><a href="#intro">Intro</a></li>
-        <li><a href="#cognitive-science">Cognitive Science</a></li>
-        <li><a href="#distributed-cognition">Distributed Cognition</a></li>
-        <li><a href="#actor-network-theory">Actor-Network Theory</a></li>
-        <li><a href="#activity-theory">Activity Theory</a></li>
-        <li><a href="#semiotics">Semiotics</a></li>
-        <li><a href="#social-psychology">Social Psychology</a></li>
-	</ul>
-
-	<!--<p style="float:right;">Background Image: Phil Russell at optionotter.com</p>-->
-
-</div>
 
 
 
