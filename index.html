@@ -18,63 +18,31 @@
 
 
 
-
-
-
-
-        <!-- Some CSS -->
+<!-- Add CSS styling -->
         <style type="text/css">
-
-        /* CSS for the small boxes that will scroll inside a div */
 
         body {
                 background-image: url('library.jpg');
-                background-repeat:repeat;
-                background-position:center;
-		font-family: helvetica, arial, sans-serrif;
+		background-color: #222;
+                background-repeat: no-repeat;
+                background-position:top center;
+		font-family: garamond, georgia, serrif;
         }
 
         #theory-viewer {
                 //border: 1px solid gray;
-                margin: 10px auto;
+                margin: 0px auto;
                 width: 1000px;
                 height: 600px;
                 overflow: hidden;
         }
 
         #theory-container {
-                width: 10000px;
+                width: 12000px;
         }
 
-	#theory-links {
-                background:rgba(255,255,255,0.8);
-	}
-
-	#theory-links ul{
-		width: 1000px;
-		margin: 0px auto;
-		list-style: none;
-
-	}
-
-	#theory-links li{
-		float: left;
-		padding: 0px 13px;
-	}
-
-
-	#theory-links a {
-		color: white;
-		text-decoration: none;
-	}
-
-	#theory-links a:hover {
-		color: black;
-	}
-
-
         .theory-column {
-                width: 800px;
+                width: 1000px;
                 float: left;
 		margin-right: 500px;
         }
@@ -89,6 +57,38 @@
                 background:rgba(255,255,255,0.8);
         }
 
+
+
+	/* Navigation Styling */
+	#theory-links {
+		margin-bottom: 0px;
+	}
+
+	#theory-links ul{
+		width: 1000px;
+		margin: 0px auto;
+		list-style: none;
+
+	}
+
+	#theory-links li{
+		float: left;
+		padding: 0px 13px;
+                background:rgba(255,255,255,0.8);
+	}
+
+
+	#theory-links a {
+		color: black;
+		text-decoration: none;
+	}
+
+	#theory-links a:hover {
+		color: gray;
+	}
+
+
+	/*Navigation arrow styling */
 	.arrow-left {
 		position: absolute;
 		left: 5px;
@@ -117,6 +117,8 @@
 		z-index: 2;
 	}
 
+
+	/* Content section styling */
         .overview {
 		background-image: url("idea.png");
 		background-repeat: no-repeat;
@@ -147,55 +149,55 @@
 
 
 
-
+<!-- Add the Javascript -->
         <script>
 
 
-function scrollL() {
-	scrollTop=$("#theory-viewer").scrollTop();
-	scrollLeft=$("#theory-viewer").scrollLeft();
-	if (scrollLeft < 1300){
-	  return false;
-	}
-	else {
-	$("#theory-viewer").scrollTo({top:scrollTop, left:scrollLeft-1300}, 800);
-	}
-}
-
-
-function scrollU() {
-	scrollTop=$("#theory-viewer").scrollTop();
-	scrollLeft=$("#theory-viewer").scrollLeft();
-	if (scrollTop < 850){
-	  return false;
-	}
-	else {
-	$("#theory-viewer").scrollTo({top:scrollTop-850, left:scrollLeft}, 800);
-	}
-}
-
-
-function scrollR() {
-	scrollTop=$("#theory-viewer").scrollTop();
-	scrollLeft=$("#theory-viewer").scrollLeft();
-	if (scrollLeft > 5*1300){
-	  return false;
-	}
-	else {
-	$("#theory-viewer").scrollTo({top:scrollTop, left:scrollLeft+1300}, 800);
-}
+	function scrollL() {
+		scrollTop=$("#theory-viewer").scrollTop();
+		scrollLeft=$("#theory-viewer").scrollLeft();
+		if (scrollLeft < 1500){
+		  return false;
+		}
+		else {
+		$("#theory-viewer").scrollTo({top:scrollTop, left:scrollLeft-1500}, 800);
+		}
 	}
 
-function scrollD() {
-	scrollTop=$("#theory-viewer").scrollTop();
-	scrollLeft=$("#theory-viewer").scrollLeft();
-	if (scrollTop > 2*850){
-	  return false;
+
+	function scrollU() {
+		scrollTop=$("#theory-viewer").scrollTop();
+		scrollLeft=$("#theory-viewer").scrollLeft();
+		if (scrollTop < 850){
+		  return false;
+		}
+		else {
+		$("#theory-viewer").scrollTo({top:scrollTop-850, left:scrollLeft}, 800);
+		}
 	}
-	else {
-	$("#theory-viewer").scrollTo({top:scrollTop+850, left:scrollLeft}, 800);
+
+
+	function scrollR() {
+		scrollTop=$("#theory-viewer").scrollTop();
+		scrollLeft=$("#theory-viewer").scrollLeft();
+		if (scrollLeft > 4*1500){
+		  return false;
+		}
+		else {
+		$("#theory-viewer").scrollTo({top:scrollTop, left:scrollLeft+1500}, 800);
 	}
-}
+		}
+
+	function scrollD() {
+		scrollTop=$("#theory-viewer").scrollTop();
+		scrollLeft=$("#theory-viewer").scrollLeft();
+		if (scrollTop > 2*850){
+		  return false;
+		}
+		else {
+		$("#theory-viewer").scrollTo({top:scrollTop+850, left:scrollLeft}, 800);
+		}
+	}
 
         // When the document is loaded...
     $(document).ready(function()
@@ -239,29 +241,22 @@ function scrollD() {
 
 
 
-
-
-
-
-
+<!-- Now for the HTML -->
 
 </head>
 
 <body>
 
-<div id="theory-links" align="center">
+<div id="theory-links">
 
 	<ul>
         <li><a href="#intro">Intro</a></li>
         <li><a href="#cognitive-science">Cognitive Science</a></li>
         <li><a href="#distributed-cognition">Distributed Cognition</a></li>
-        <li><a href="#actor-network-theory">Actor-Network Theory</a></li>
         <li><a href="#activity-theory">Activity Theory</a></li>
         <li><a href="#semiotics">Semiotics</a></li>
         <li><a href="#social-psychology">Social Psychology</a></li>
 	</ul>
-
-	<!--<p style="float:right;">Background Image: Phil Russell at optionotter.com</p>-->
 
 </div>
 
@@ -295,13 +290,15 @@ function scrollD() {
 
         <div id="cognitive-science-overview" class="theory-section overview">
                 <h1>Cognitive Science</h1>
+		<h2>Overview</h2>
                 <a href="#intro"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#distributed-cognition-overview"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#cognitive-science-people"><img src="arrow_down.png" class="arrow-down"></a>
         </div>
 
         <div id="cognitive-science-people" class="theory-section people">
-                <h1>People</h1>
+                <h1>Cognitive Science</h1>
+		<h2>People</h2>
                 <a href="#cognitive-science-overview"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#major-figures"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#distributed-cognition-people"><img src="arrow_right.png" class="arrow-right"></a>
@@ -309,7 +306,8 @@ function scrollD() {
         </div>
 
         <div id="cognitive-science-problems" class="theory-section problems">
-                <h1>Problems</h1>
+                <h1>Cognitive Science</h1>
+                <h2>Problems</h2>
                 <a href="#cognitive-science-people"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#intro"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#distributed-cognition-problems"><img src="arrow_right.png" class="arrow-right"></a>
@@ -317,7 +315,8 @@ function scrollD() {
         </div>
 
         <div id="cognitive-science-methods" class="theory-section methods">
-                <h1>Methods</h1>
+                <h1>Cognitive Science</h1>
+                <h2>Methods</h2>
                 <a href="#cognitive-science-problems"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#intro"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#distributed-cognition-methods"><img src="arrow_right.png" class="arrow-right"></a>
@@ -330,99 +329,71 @@ function scrollD() {
 
         <div id="distributed-cognition-overview" class="theory-section overview">
                 <h1>Distributed Cognition</h1>
+		<h2>Overview</h2>
                 <a href="#cognitive-science-overview"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#actor-network-theory-overview"><img src="arrow_right.png" class="arrow-right"></a>
+                <a href="#activity-theory-overview"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#distributed-cognition-people"><img src="arrow_down.png" class="arrow-down"></a>
         </div>
 
         <div id="distributed-cognition-people" class="theory-section people">
-                <h1>People</h1>
+                <h1>Distributed Cognition</h1>
+                <h2>People</h2>
                 <a href="#distributed-cognition-overview"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#cognitive-science-people"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#actor-network-theory-people"><img src="arrow_right.png" class="arrow-right"></a>
+                <a href="#activity-theory-people"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#distributed-cognition-problems"><img src="arrow_down.png" class="arrow-down"></a>
         </div>
 
         <div id="distributed-cognition-problems" class="theory-section problems">
-                <h1>Problems</h1>
+                <h1>Distributed Cognition</h1>
+                <h2>Problems</h2>
                 <a href="#distributed-cognition-people"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#cognitive-science-problems"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#actor-network-theory-problems"><img src="arrow_right.png" class="arrow-right"></a>
+                <a href="#activity-theory-problems"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#distributed-cognition-methods"><img src="arrow_down.png" class="arrow-down"></a>
         </div>
 
         <div id="distributed-cognition-methods" class="theory-section methods">
-                <h1>Methods</h1>
+                <h1>Distributed Cognition</h1>
+                <h2>Methods</h2>
                 <a href="#distributed-cognition-problems"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#cognitive-science-methods"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#actor-network-theory-methods"><img src="arrow_right.png" class="arrow-right"></a>
+                <a href="#activity-theory-methods"><img src="arrow_right.png" class="arrow-right"></a>
         </div>
 
 </div>
-
-
-<div class="theory-column" id="actor-network-theory">
-
-        <div id="actor-network-theory-overview" class="theory-section overview">
-		<h1>Actor-Network Theory</h1>
-                <a href="#distributed-cognition-overview"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#activity-theory-overview"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#actor-network-theory-people"><img src="arrow_down.png" class="arrow-down"></a>
-	</div>
-        
-	<div id="actor-network-theory-people" class="theory-section people">
-		<h1>People</h1>
-                <a href="#actor-network-theory-overview"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#distributed-cognition-people"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#activity-theory-people"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#actor-network-theory-problems"><img src="arrow_down.png" class="arrow-down"></a>
-	</div>
-        
-	<div id="actor-network-theory-problems" class="theory-section problems">
-		<h1>Problems</h1>
-                <a href="#actor-network-theory-people"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#distributed-cognition-problems"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#activity-theory-problems"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#actor-network-theory-methods"><img src="arrow_down.png" class="arrow-down"></a>
-	</div>
-        
-	<div id="actor-network-theory-methods" class="theory-section methods">
-		<h1>Methods</h1>
-                <a href="#actor-network-theory-problems"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#distributed-cognition-methods"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#activity-theory-methods"><img src="arrow_right.png" class="arrow-right"></a>
-	</div>
-
-</div>
-
 
 
 <div class="theory-column" id="activity-theory">
 
         <div id="activity-theory-overview" class="theory-section overview">
 		<h1>Activity Theory</h1>
-                <a href="#actor-network-theory-overview"><img src="arrow_left.png" class="arrow-left"></a>
+		<h2>Overview</h2>
+                <a href="#distributed-cognition-overview"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#semiotics-overview"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#activity-theory-people"><img src="arrow_down.png" class="arrow-down"></a>
 </div>
         <div id="activity-theory-people" class="theory-section people">
-		<h1>People</h1>
+		<h1>Activity Theory</h1>
+		<h2>People</h2>
                 <a href="#activity-theory-overview"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#actor-network-theory-people"><img src="arrow_left.png" class="arrow-left"></a>
+                <a href="#distributed-cognition-people"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#semiotics-people"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#activity-theory-problems"><img src="arrow_down.png" class="arrow-down"></a>
 </div>
         <div id="activity-theory-problems" class="theory-section problems">
-		<h1>Problems</h1>
+		<h1>Activity Theory</h1>
+		<h2>Problems</h2>
                 <a href="#activity-theory-people"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#actor-network-theory-problems"><img src="arrow_left.png" class="arrow-left"></a>
+                <a href="#distributed-cognition-problems"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#semiotics-problems"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#activity-theory-methods"><img src="arrow_down.png" class="arrow-down"></a>
 </div>
         <div id="activity-theory-methods" class="theory-section methods">
-		<h1>Methods</h1>
+		<h1>Activity Theory</h1>
+		<h2>Methods</h2>
                 <a href="#activity-theory-problems"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#actor-network-theory-methods"><img src="arrow_left.png" class="arrow-left"></a>
+                <a href="#distributed-cognition-methods"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#semiotics-methods"><img src="arrow_right.png" class="arrow-right"></a>
 </div>
 
@@ -434,26 +405,30 @@ function scrollD() {
 
         <div id="semiotics-overview" class="theory-section overview">
 		<h1>Semiotics</h1>
+		<h2>Overview</h2>
                 <a href="#activity-theory-overview"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-overview"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#semiotics-people"><img src="arrow_down.png" class="arrow-down"></a>
 	</div>
         <div id="semiotics-people" class="theory-section people">
-		<h1>People</h1>
+		<h1>Semiotics</h1>
+		<h2>People</h2>
                 <a href="#semiotics-overview"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#activity-theory-people"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-people"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#semiotics-problems"><img src="arrow_down.png" class="arrow-down"></a>
 	</div>
         <div id="semiotics-problems" class="theory-section problems">
-		<h1>Problems</h1>
+		<h1>Semiotics</h1>
+		<h2>Problems</h2>
                 <a href="#semiotics-people"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#activity-theory-problems"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-problems"><img src="arrow_right.png" class="arrow-right"></a>
                 <a href="#semiotics-methods"><img src="arrow_down.png" class="arrow-down"></a>
 	</div>
         <div id="semiotics-methods" class="theory-section methods">
-		<h1>Methods</h1>
+		<h1>Semiotics</h1>
+		<h2>Methods</h2>
                 <a href="#semiotics-problems"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#activity-theory-methods"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-methods"><img src="arrow_right.png" class="arrow-right"></a>
@@ -467,23 +442,27 @@ function scrollD() {
 
         <div id="social-psychology-overview" class="theory-section overview">
 		<h1>Social Psychology</h1>
+		<h2>Overview</h2>
                 <a href="#semiotics-overview"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-people"><img src="arrow_down.png" class="arrow-down"></a>
 	</div>
         <div id="social-psychology-people" class="theory-section people">
-		<h1>People</h1>
+		<h1>Social Psychology</h1>
+		<h2>People</h2>
                 <a href="#social-psychology-overview"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#semiotics-people"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-problems"><img src="arrow_down.png" class="arrow-down"></a>
 	</div>
         <div id="social-psychology-problems" class="theory-section problems">
-		<h1>Problems</h1>
+		<h1>Social Psychology</h1>
+		<h2>Problems</h2>
                 <a href="#social-psychology-people"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#semiotics-problems"><img src="arrow_left.png" class="arrow-left"></a>
                 <a href="#social-psychology-methods"><img src="arrow_down.png" class="arrow-down"></a>
 	</div>
         <div id="social-psychology-methods" class="theory-section methods">
-		<h1>Methods</h1>
+		<h1>Social Psychology</h1>
+		<h2>Methods</h2>
                 <a href="#social-psychology-problems"><img src="arrow_up.png" class="arrow-up"></a>
                 <a href="#semiotics-methods"><img src="arrow_left.png" class="arrow-left"></a>
 	</div>
