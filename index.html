@@ -21,14 +21,20 @@
 
 <!-- Add CSS styling -->
         <style type="text/css">
+		
+		html {
+			background: url('library.jpg') no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		
 
         body {
-                background-image: url('library.jpg');
-				background-color: #222;
-                background-repeat: no-repeat;
-                background-position:top center;
-				/*font-family: garamond, georgia, serrif;*/
+           font-family: garamond, georgia, serrif;
         }
+		
 		h1 {
 			font-family: 'Old Standard TT', serrif;
 			font-weight: 500;
@@ -37,7 +43,7 @@
 		}
 
         #theory-viewer {
-                //border: 1px solid gray;
+			//	border: 1px solid gray;
                 margin: 0px auto;
                 width: 1000px;
                 height: 600px;
@@ -51,16 +57,16 @@
         .theory-column {
                 width: 1000px;
                 float: left;
-		margin-right: 500px;
+				margin-right: 500px;
         }
 
         .theory-section {
-		position: relative;
+				position: relative;
                 color: #000;
                 width: 900px;
                 height: 580px;
-		margin-bottom: 250px;
-		padding: 10px 50px;
+				margin-bottom: 250px;
+				padding: 10px 50px;
                 background:rgba(255,255,255,0.8);
         }
 
@@ -253,6 +259,7 @@
 </head>
 
 <body>
+
 
 <div id="theory-links">
 
