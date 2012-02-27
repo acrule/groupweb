@@ -14,7 +14,28 @@
         <script src="http://flesler-plugins.googlecode.com/files/jquery.scrollTo-1.4.2-min.js"></script>
 
         <!-- Load LocalScroll -->
-        <script src="http://flesler-plugins.googlecode.com/files/jquery.localscroll-1.2.7-min.js"></script>
+       <script src="http://flesler-plugins.googlecode.com/files/jquery.localscroll-1.2.7-min.js"></script> 
+	   
+	   <script src="jquery.nav.js"></script>
+<script>
+$(document).ready(function() {
+  $('#theory-links').onePageNav({
+	currentClass: 'current',
+  changeHash: false,
+  scrollSpeed: 750,
+  scrollOffset: 30,
+    begin: function() {
+	  console.log('start')
+    },
+    end: function() {
+	  console.log('stop')
+    }
+  });
+  
+
+  
+});
+</script>
 		
 		<link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
@@ -85,7 +106,9 @@
 		margin: 0px auto;
 		list-style: none;
 
-	}
+	}	
+
+
 
 	#theory-links li{
 		float: left;
@@ -123,7 +146,10 @@
 		background: #e1f0fa;
 	}
 
-
+	#theory-links .current a {
+		color:#2676ac;
+		background: #e1f0fa;
+	}
 
 
 	/*Navigation arrow styling */
@@ -285,11 +311,10 @@
 
 <body>
 
-
 <div id="theory-links">
 
-	<ul>
-        <li><a href="#intro">	Intro</a></li>
+	<ul id="theory-links">
+        <li class="current"><a href="#intro">	Intro</a></li>
         <li><a href="#cognitive-science">Cognitive Science</a></li>
         <li><a href="#distributed-cognition">Distributed Cognition</a></li>
         <li><a href="#activity-theory">Activity Theory</a></li>
