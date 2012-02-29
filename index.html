@@ -40,13 +40,22 @@
 		   	margin: 0;
 			padding: 0;
 			border: none;
+			font-size: 14px;
         }
 		
 		h1 {
 			font-family: 'Old Standard TT', serrif;
 			font-weight: 500;
 			color: #3d3b3b;
-			font-size: 52px;
+			font-size: 28px;
+		}
+
+		h2 {
+			font-family: 'Old Standard TT', serrif;
+			font-weight: 500;
+			color: #3d3b3b;
+			font-size: 18px;
+			margin-bottom: 0px
 		}
 
 
@@ -91,7 +100,6 @@
 
 	height: 55px;
 	position:relative;
-//	top: -5px;
 	left: 0;
 	width: 100%;
 	box-shadow: 0 0 50px #242424;
@@ -127,10 +135,6 @@
 		color: #333;
 		padding: 5px;
 		background:rgba(255,255,255,0.95);
-
-
- //   position: relative;
-
 
 		line-height:50%;
 		-webkit-transition: all 100ms linear;
@@ -412,47 +416,48 @@
         {
 
 
-// change highlighted li when clicing through nav
-$("#theory-links li").click(function(){
-  // If this isn't already current
-  if (!$(this).hasClass("current")) {
-    // Remove the class from anything that is current
-    $("li.current").removeClass("current");
-    // And make this active
-    $(this).addClass("current");
-  }
+	// change highlighted li when clicing through nav
+	$("#theory-links li").click(function(){
+	  // If this isn't already current
+	  if (!$(this).hasClass("current")) {
+	    // Remove the class from anything that is current
+	    $("li.current").removeClass("current");
+	    // And make this active
+	    $(this).addClass("current");
+	  }
 
-    if(this.id == "in"){
-      xindex = 0;
-      yindex = 0;
-    }
+	    if(this.id == "in"){
+	      xindex = 0;
+	      yindex = 0;
+	    }
 
-    if(this.id == "cs"){
-      xindex = 1;
-      yindex = 0;
-    }
+	    if(this.id == "cs"){
+	      xindex = 1;
+	      yindex = 0;
+	    }
 
-    if(this.id == "dc"){
-      xindex = 2;
-      yindex = 0;
-    }
+	    if(this.id == "dc"){
+	      xindex = 2;
+	      yindex = 0;
+	    }
 
-    if(this.id == "at"){
-      xindex = 3;
-      yindex = 0;
-    }
+	    if(this.id == "at"){
+	      xindex = 3;
+	      yindex = 0;
+	    }
 
-    if(this.id == "se"){
-      xindex = 4;
-      yindex = 0;
-    }
+	    if(this.id == "se"){
+	      xindex = 4;
+	      yindex = 0;
+	    }
 
-    if(this.id == "sp"){
-      xindex = 5;
-      yindex = 0;
-    }
+	    if(this.id == "sp"){
+	      xindex = 5;
+	      yindex = 0;
+	    }
 
-});
+	});
+
 
                 // Scroll the content inside the #scroll-container div
                 $.localScroll({
@@ -460,29 +465,29 @@ $("#theory-links li").click(function(){
                    axis: 'xy'
                 });
 
-	//Catch keypress events for arrow keys
-  $(document).keydown(function (evt) {
-    if (evt.keyCode == 37) { // left arrow
-      evt.preventDefault(); // prevents the usual scrolling behaviour
-      scrollL(); // scroll to the next new heading instead
-    }
+	  //Catch keypress events for arrow keys
+	  $(document).keydown(function (evt) {
+	    if (evt.keyCode == 37) { // left arrow
+	      evt.preventDefault(); // prevents the usual scrolling behaviour
+	      scrollL(); // scroll to the next new heading instead
+	    }
 
-    if (evt.keyCode == 38) { // up arrow
-      evt.preventDefault(); // prevents the usual scrolling behaviour
-      scrollU(); // scroll to the next new heading instead
-    }
+	    if (evt.keyCode == 38) { // up arrow
+	      evt.preventDefault(); // prevents the usual scrolling behaviour
+	      scrollU(); // scroll to the next new heading instead
+	    }
 
-    if (evt.keyCode == 39) { // right arrow
-      evt.preventDefault(); // prevents the usual scrolling behaviour
-      scrollR(); // scroll to the next new heading instead
-    }
+	    if (evt.keyCode == 39) { // right arrow
+	      evt.preventDefault(); // prevents the usual scrolling behaviour
+	      scrollR(); // scroll to the next new heading instead
+	    }
 
-    if (evt.keyCode == 40) { // down arrow
-      evt.preventDefault(); // prevents the usual scrolling behaviour
-      scrollD(); // scroll to the next new heading instead
-    }
+	    if (evt.keyCode == 40) { // down arrow
+	      evt.preventDefault(); // prevents the usual scrolling behaviour
+	      scrollD(); // scroll to the next new heading instead
+	    }
 
-  });
+	  });
 
 
 	});
@@ -525,6 +530,11 @@ $("#theory-links li").click(function(){
 </p><p>
 Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesent nec tortor ipsum, sit amet rutrum sem. Quisque vestibulum erat nisl. Nulla nec nisi nibh, id placerat libero. Aenean porttitor dolor at lorem fringilla eu mollis odio lacinia. Aenean et massa leo, vitae feugiat erat. Mauris id urna at nisi aliquet pretium sed in tortor.
              </p>
+
+		<h1>About this page</h1>
+
+		<p>This page is meant for you to explore the major theories in HCI and their connections. Feel free to navigate using the on-screen arrows, or the arrow-keys on your keyboard </p>
+
 		<a  class="arrow-right"  onclick="scrollR()"></a>
 		<a class="arrow-down" onclick="scrollD()"></a>
         </div>
@@ -537,6 +547,27 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
 </p><p>
 Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesent nec tortor ipsum, sit amet rutrum sem. Quisque vestibulum erat nisl. Nulla nec nisi nibh, id placerat libero. Aenean porttitor dolor at lorem fringilla eu mollis odio lacinia. Aenean et massa leo, vitae feugiat erat. Mauris id urna at nisi aliquet pretium sed in tortor.
              </p>
+                <a class="arrow-up" onclick="scrollU()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
+        </div>
+
+        <div id="major-figures" class="theory-section">
+                <h1>References</h1>
+
+		<ul>
+		<li>Reference Here</li>
+		</ul>
+
+                <a class="arrow-up" onclick="scrollU()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
+        </div>
+
+        <div id="about" class="theory-section">
+                <h1>About</h1>
+
+		<p>Here is some text explaining who we are and why we made this page</p>
                 <a class="arrow-up" onclick="scrollU()"></a>
                 <a class="arrow-right" onclick="scrollR()"></a>
         </div>
@@ -594,7 +625,7 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
 		<h2>Overview</h2>
                  <a class="arrow-left" onclick="scrollL()"></a>
                 <a class="arrow-right" onclick="scrollR()"></a>
-                <a class="arrow-up" onclick="scrollD()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
         </div>
 
         <div id="distributed-cognition-people" class="theory-section people">
@@ -705,12 +736,43 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
         <div id="social-psychology-overview" class="theory-section overview">
 		<h1>Social Psychology</h1>
 		<h2>Overview</h2>
+
+		<p>Social psychology is a sub-field of psychology which studies the effect of social interactions on group and individual behavior. While not native to HCI, social psychology has been widely applied to the field, especially in the study of Computer-Supported Cooperative Work (CSCW). Rather than being a single, unified theory like activity theory or distributed cognition, social psychology refers to a group of loosely tied theories which make observations and predictions about group behavior.</p>
+
+		<h2>Central Tenants</h2>
+		<ul>
+		<li><strong>The Input-Process-Output Model</strong> states that inputs of personnel, tasks and tools are processed by a group using interaction patterns, roles and strategy, leading to outputs of production, meeting member needs, and maintaining group cohesion. Changes to inputs and processing methods lead to changes in outputs.</li>
+		<li><strong>Process losses</strong> are output losses due to  mis-coordination and motivation losses. One example is production blocking where allowing for only one group member to contribute at a time blocks any other group members from being productive.</li>
+		<li><strong>Social loafing</strong> states that when output consequences are diluted among team members, individuals will be less likely to contribute as the reward for their input will not be given to them directly, but disstributed to the team.</li>
+		</ul>
+
+		<h2>Pro</h2>
+		<ul>
+		<li>Social psychology has a rich history dating back over a century that can be applied to current problems in HCI.</li>
+		<li>Researchers do not need to adhere to an overarching complete theory in order to use parts of social pscyhology.</li>
+		</ul>
+
+
+		<h2>Con</h2>
+		<ul>
+		<li>Does not provide an overarching guiding theory</li>
+		<li>Can be hard to predict what interventions to implement</li>
+		</ul>
+
                 <a class="arrow-left" onclick="scrollL()"></a>
                 <a class="arrow-down" onclick="scrollD()"></a>
 	</div>
         <div id="social-psychology-people" class="theory-section people">
 		<h1>Social Psychology</h1>
 		<h2>People</h2>
+
+		<ul>
+		<li><strong>Kurt Lewin</strong> - Father of Social Psychology</li>
+		<li><strong>Robert Kraut</strong> - Pioneer in applying social psychology to HCI</li>
+		<li><strong>Sherry Turkle</strong> - Explanation here</li>
+		<li><strong>Andrew Feenberg</strong> - Explanation here</li>
+		</ul>
+
                 <a class="arrow-left" onclick="scrollL()"></a>
                 <a class="arrow-down" onclick="scrollD()"></a>
                 <a class="arrow-up" onclick="scrollU()"></a>
@@ -718,6 +780,9 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
         <div id="social-psychology-problems" class="theory-section problems">
 		<h1>Social Psychology</h1>
 		<h2>Problems</h2>
+
+		<p>Social Psychology has mainly be applied to CSCW</p>
+
                 <a class="arrow-left" onclick="scrollL()"></a>
                 <a class="arrow-down" onclick="scrollD()"></a>
                 <a class="arrow-up" onclick="scrollU()"></a>
