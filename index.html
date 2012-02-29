@@ -16,26 +16,6 @@
         <!-- Load LocalScroll -->
        <script src="http://flesler-plugins.googlecode.com/files/jquery.localscroll-1.2.7-min.js"></script> 
 	   
-	   <script src="jquery.nav.js"></script>
-<script>
-$(document).ready(function() {
-  $('#theory-links').onePageNav({
-	currentClass: 'current',
-  changeHash: false,
-  scrollSpeed: 750,
-  scrollOffset: 30,
-    begin: function() {
-	  console.log('start')
-    },
-    end: function() {
-	  console.log('stop')
-    }
-  });
-  
-
-  
-});
-</script>
 		
 		<link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
@@ -81,7 +61,7 @@ $(document).ready(function() {
 
         #theory-container {
 
-                width: 12000px;
+                width: 150000px;
         }
 
         .theory-column {
@@ -203,6 +183,25 @@ $(document).ready(function() {
 		left: 5px;
 		top: 287px;
 		z-index: 2;
+		width: 40px;
+		height:40px;
+
+		border-radius:20px;
+		-moz-border-radius:20px;
+		-webkit-border-radius:20px;
+		-khtml-border-radius:20px;
+		border:#ccc 1px double;
+		background: #fff url("arrow_left.png");
+		background-repeat:no-repeat;
+		background-position:center; 
+		-webkit-transition: all 100ms linear;
+		-moz-transition: all 100ms linear;
+		-o-transition: all 100ms linear;
+		-ms-transition: all 100ms linear;
+		transition: all 100ms linear;
+		box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
+		-moz-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
+		-webkit-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
 	}
 
 	.arrow-right {
@@ -234,16 +233,54 @@ $(document).ready(function() {
 
 	.arrow-up {
 		position: absolute;
-		left: 487px;
+		right: 500px;
 		top: 5px;
 		z-index: 2;
+		width: 40px;
+		height:40px;
+
+		border-radius:20px;
+		-moz-border-radius:20px;
+		-webkit-border-radius:20px;
+		-khtml-border-radius:20px;
+		border:#ccc 1px double;
+		background: #fff url("arrow_up.png");
+		background-repeat:no-repeat;
+		background-position:center; 
+		-webkit-transition: all 100ms linear;
+		-moz-transition: all 100ms linear;
+		-o-transition: all 100ms linear;
+		-ms-transition: all 100ms linear;
+		transition: all 100ms linear;
+		box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
+		-moz-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
+		-webkit-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
 	}
 
 	.arrow-down {
 		position: absolute;
-		left: 487px;
+		right: 500px;
 		bottom: 5px;
 		z-index: 2;
+		width: 40px;
+		height:40px;
+
+		border-radius:20px;
+		-moz-border-radius:20px;
+		-webkit-border-radius:20px;
+		-khtml-border-radius:20px;
+		border:#ccc 1px double;
+		background: #fff url("arrow_down.png");
+		background-repeat:no-repeat;
+		background-position:center; 
+		-webkit-transition: all 100ms linear;
+		-moz-transition: all 100ms linear;
+		-o-transition: all 100ms linear;
+		-ms-transition: all 100ms linear;
+		transition: all 100ms linear;
+		box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
+		-moz-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
+		-webkit-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
 	}
 	
 	.arrowbutton {
@@ -317,58 +354,105 @@ $(document).ready(function() {
 
 
 <!-- Add the Javascript -->
-        <script>
-
+     <script>
+	var a = ["in", "cs", "dc", "at", "se", "sp"];
+	var x = [0,1500,3000,4500,6000,7500];
+	var y = [0,850,1700,2550];
+	var xindex = 0;
+	var yindex = 0;
 
 	function scrollL() {
-		scrollTop=$("#theory-viewer").scrollTop();
-		scrollLeft=$("#theory-viewer").scrollLeft();
-		if (scrollLeft < 1500){
+		if (xindex <= 0){
 		  return false;
 		}
 		else {
-		$("#theory-viewer").scrollTo({top:scrollTop, left:scrollLeft-1500}, 800);
+		$('#'+ a[xindex]).removeClass('current');
+		xindex= xindex-1;
+		$("#theory-viewer").scrollTo({top:y[yindex], left:x[xindex]}, 800);
+		$('#'+ a[xindex]).addClass('current');
 		}
 	}
 
 
 	function scrollU() {
-		scrollTop=$("#theory-viewer").scrollTop();
-		scrollLeft=$("#theory-viewer").scrollLeft();
-		if (scrollTop < 850){
+		if (yindex <= 0){
 		  return false;
 		}
 		else {
-		$("#theory-viewer").scrollTo({top:scrollTop-850, left:scrollLeft}, 800);
+		yindex=yindex-1;
+		$("#theory-viewer").scrollTo({top:y[yindex], left:x[xindex]}, 800);
 		}
 	}
 
 
 	function scrollR() {
-		scrollTop=$("#theory-viewer").scrollTop();
-		scrollLeft=$("#theory-viewer").scrollLeft();
-		if (scrollLeft > 4*1500){
+		if (xindex >= 5){
 		  return false;
 		}
 		else {
-		$("#theory-viewer").scrollTo({top:scrollTop, left:scrollLeft+1500}, 800);
+		$('#'+ a[xindex]).removeClass('current');
+		xindex= xindex+1;
+		$("#theory-viewer").scrollTo({top:y[yindex], left:x[xindex]}, 800);
+		$('#'+ a[xindex]).addClass('current');
 	}
 		}
 
 	function scrollD() {
-		scrollTop=$("#theory-viewer").scrollTop();
-		scrollLeft=$("#theory-viewer").scrollLeft();
-		if (scrollTop > 2*850){
+		if (yindex >= 3){
 		  return false;
 		}
 		else {
-		$("#theory-viewer").scrollTo({top:scrollTop+850, left:scrollLeft}, 800);
+		yindex=yindex+1;
+		$("#theory-viewer").scrollTo({top:y[yindex], left:x[xindex]}, 800);
 		}
 	}
 
         // When the document is loaded...
     $(document).ready(function()
         {
+
+
+// change highlighted li when clicing through nav
+$("#theory-links li").click(function(){
+  // If this isn't already current
+  if (!$(this).hasClass("current")) {
+    // Remove the class from anything that is current
+    $("li.current").removeClass("current");
+    // And make this active
+    $(this).addClass("current");
+  }
+
+    if(this.id == "in"){
+      xindex = 0;
+      yindex = 0;
+    }
+
+    if(this.id == "cs"){
+      xindex = 1;
+      yindex = 0;
+    }
+
+    if(this.id == "dc"){
+      xindex = 2;
+      yindex = 0;
+    }
+
+    if(this.id == "at"){
+      xindex = 3;
+      yindex = 0;
+    }
+
+    if(this.id == "se"){
+      xindex = 4;
+      yindex = 0;
+    }
+
+    if(this.id == "sp"){
+      xindex = 5;
+      yindex = 0;
+    }
+
+});
 
                 // Scroll the content inside the #scroll-container div
                 $.localScroll({
@@ -417,12 +501,12 @@ $(document).ready(function() {
 <div id="theory-links" >
 
 	<ul>
-        <li class="current"><a href="#intro" class="button">	Intro</a></li>
-        <li><a href="#cognitive-science"  class="button">Cognitive Science</a></li>
-        <li><a href="#distributed-cognition"  class="button">Distributed Cognition</a></li>
-        <li><a href="#activity-theory" class="button" >Activity Theory</a></li>
-        <li><a href="#semiotics"  class="button">Semiotics</a></li>
-        <li><a href="#social-psychology"  class="button">Social Psychology</a></li>
+        <li class="current" id="in"><a href="#intro" class="button">	Intro</a></li>
+        <li id="cs"><a href="#cognitive-science"  class="button">Cognitive Science</a></li>
+        <li id="dc"><a href="#distributed-cognition"  class="button">Distributed Cognition</a></li>
+        <li id="at"><a href="#activity-theory" class="button" >Activity Theory</a></li>
+        <li id="se"><a href="#semiotics"  class="button">Semiotics</a></li>
+        <li id="sp"><a href="#social-psychology"  class="button">Social Psychology</a></li>
 	</ul>
 
 </div>
@@ -441,8 +525,8 @@ $(document).ready(function() {
 </p><p>
 Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesent nec tortor ipsum, sit amet rutrum sem. Quisque vestibulum erat nisl. Nulla nec nisi nibh, id placerat libero. Aenean porttitor dolor at lorem fringilla eu mollis odio lacinia. Aenean et massa leo, vitae feugiat erat. Mauris id urna at nisi aliquet pretium sed in tortor.
              </p>
-			 <a href="#cognitive-science-overview" class="arrow-right"></a>
-		<a href="#major-figures"><img src="arrow_down.png" class="arrow-down"></a>
+		<a  class="arrow-right"  onclick="scrollR()"></a>
+		<a class="arrow-down" onclick="scrollD()"></a>
         </div>
 
         <div id="major-figures" class="theory-section people">
@@ -453,8 +537,8 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
 </p><p>
 Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesent nec tortor ipsum, sit amet rutrum sem. Quisque vestibulum erat nisl. Nulla nec nisi nibh, id placerat libero. Aenean porttitor dolor at lorem fringilla eu mollis odio lacinia. Aenean et massa leo, vitae feugiat erat. Mauris id urna at nisi aliquet pretium sed in tortor.
              </p>
-                <a href="#intro"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#cognitive-science-people"><img src="arrow_right.png" class="arrow-right"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
         </div>
 
 
@@ -470,35 +554,34 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
 </p><p>
 Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesent nec tortor ipsum, sit amet rutrum sem. Quisque vestibulum erat nisl. Nulla nec nisi nibh, id placerat libero. Aenean porttitor dolor at lorem fringilla eu mollis odio lacinia. Aenean et massa leo, vitae feugiat erat. Mauris id urna at nisi aliquet pretium sed in tortor.
              </p>
-                <a href="#intro"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#distributed-cognition-overview"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#cognitive-science-people"><img src="arrow_down.png" class="arrow-down"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
         </div>
 
         <div id="cognitive-science-people" class="theory-section people">
                 <h1>Cognitive Science</h1>
-		<h2>People</h2>
-                <a href="#cognitive-science-overview"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#major-figures"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#distributed-cognition-people"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#cognitive-science-problems"><img src="arrow_down.png" class="arrow-down"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
         </div>
 
         <div id="cognitive-science-problems" class="theory-section problems">
                 <h1>Cognitive Science</h1>
                 <h2>Problems</h2>
-                <a href="#cognitive-science-people"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#intro"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#distributed-cognition-problems"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#cognitive-science-methods"><img src="arrow_down.png" class="arrow-down"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
         </div>
 
         <div id="cognitive-science-methods" class="theory-section methods">
                 <h1>Cognitive Science</h1>
                 <h2>Methods</h2>
-                <a href="#cognitive-science-problems"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#intro"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#distributed-cognition-methods"><img src="arrow_right.png" class="arrow-right"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
         </div>
 
 </div>
@@ -509,35 +592,35 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
         <div id="distributed-cognition-overview" class="theory-section overview">
                 <h1>Distributed Cognition</h1>
 		<h2>Overview</h2>
-                <a href="#cognitive-science-overview"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#activity-theory-overview"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#distributed-cognition-people"><img src="arrow_down.png" class="arrow-down"></a>
+                 <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-up" onclick="scrollD()"></a>
         </div>
 
         <div id="distributed-cognition-people" class="theory-section people">
                 <h1>Distributed Cognition</h1>
                 <h2>People</h2>
-                <a href="#distributed-cognition-overview"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#cognitive-science-people"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#activity-theory-people"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#distributed-cognition-problems"><img src="arrow_down.png" class="arrow-down"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
         </div>
 
         <div id="distributed-cognition-problems" class="theory-section problems">
                 <h1>Distributed Cognition</h1>
                 <h2>Problems</h2>
-                <a href="#distributed-cognition-people"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#cognitive-science-problems"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#activity-theory-problems"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#distributed-cognition-methods"><img src="arrow_down.png" class="arrow-down"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
         </div>
 
         <div id="distributed-cognition-methods" class="theory-section methods">
                 <h1>Distributed Cognition</h1>
                 <h2>Methods</h2>
-                <a href="#distributed-cognition-problems"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#cognitive-science-methods"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#activity-theory-methods"><img src="arrow_right.png" class="arrow-right"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
         </div>
 
 </div>
@@ -548,32 +631,32 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
         <div id="activity-theory-overview" class="theory-section overview">
 		<h1>Activity Theory</h1>
 		<h2>Overview</h2>
-                <a href="#distributed-cognition-overview"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#semiotics-overview"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#activity-theory-people"><img src="arrow_down.png" class="arrow-down"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
 </div>
         <div id="activity-theory-people" class="theory-section people">
 		<h1>Activity Theory</h1>
 		<h2>People</h2>
-                <a href="#activity-theory-overview"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#distributed-cognition-people"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#semiotics-people"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#activity-theory-problems"><img src="arrow_down.png" class="arrow-down"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
 </div>
         <div id="activity-theory-problems" class="theory-section problems">
 		<h1>Activity Theory</h1>
 		<h2>Problems</h2>
-                <a href="#activity-theory-people"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#distributed-cognition-problems"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#semiotics-problems"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#activity-theory-methods"><img src="arrow_down.png" class="arrow-down"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
 </div>
         <div id="activity-theory-methods" class="theory-section methods">
 		<h1>Activity Theory</h1>
 		<h2>Methods</h2>
-                <a href="#activity-theory-problems"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#distributed-cognition-methods"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#semiotics-methods"><img src="arrow_right.png" class="arrow-right"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
 </div>
 
 </div>
@@ -585,32 +668,32 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
         <div id="semiotics-overview" class="theory-section overview">
 		<h1>Semiotics</h1>
 		<h2>Overview</h2>
-                <a href="#activity-theory-overview"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#social-psychology-overview"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#semiotics-people"><img src="arrow_down.png" class="arrow-down"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
 	</div>
         <div id="semiotics-people" class="theory-section people">
 		<h1>Semiotics</h1>
 		<h2>People</h2>
-                <a href="#semiotics-overview"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#activity-theory-people"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#social-psychology-people"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#semiotics-problems"><img src="arrow_down.png" class="arrow-down"></a>
+                  <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
 	</div>
         <div id="semiotics-problems" class="theory-section problems">
 		<h1>Semiotics</h1>
 		<h2>Problems</h2>
-                <a href="#semiotics-people"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#activity-theory-problems"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#social-psychology-problems"><img src="arrow_right.png" class="arrow-right"></a>
-                <a href="#semiotics-methods"><img src="arrow_down.png" class="arrow-down"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
 	</div>
         <div id="semiotics-methods" class="theory-section methods">
 		<h1>Semiotics</h1>
 		<h2>Methods</h2>
-                <a href="#semiotics-problems"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#activity-theory-methods"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#social-psychology-methods"><img src="arrow_right.png" class="arrow-right"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-right" onclick="scrollR()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
 	</div>
 
 </div>
@@ -622,28 +705,28 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
         <div id="social-psychology-overview" class="theory-section overview">
 		<h1>Social Psychology</h1>
 		<h2>Overview</h2>
-                <a href="#semiotics-overview"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#social-psychology-people"><img src="arrow_down.png" class="arrow-down"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
 	</div>
         <div id="social-psychology-people" class="theory-section people">
 		<h1>Social Psychology</h1>
 		<h2>People</h2>
-                <a href="#social-psychology-overview"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#semiotics-people"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#social-psychology-problems"><img src="arrow_down.png" class="arrow-down"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
 	</div>
         <div id="social-psychology-problems" class="theory-section problems">
 		<h1>Social Psychology</h1>
 		<h2>Problems</h2>
-                <a href="#social-psychology-people"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#semiotics-problems"><img src="arrow_left.png" class="arrow-left"></a>
-                <a href="#social-psychology-methods"><img src="arrow_down.png" class="arrow-down"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-down" onclick="scrollD()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
 	</div>
         <div id="social-psychology-methods" class="theory-section methods">
 		<h1>Social Psychology</h1>
 		<h2>Methods</h2>
-                <a href="#social-psychology-problems"><img src="arrow_up.png" class="arrow-up"></a>
-                <a href="#semiotics-methods"><img src="arrow_left.png" class="arrow-left"></a>
+                <a class="arrow-left" onclick="scrollL()"></a>
+                <a class="arrow-up" onclick="scrollU()"></a>
 	</div>
 
 </div>
