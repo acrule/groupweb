@@ -16,53 +16,52 @@
         <!-- Load LocalScroll -->
        <script src="http://flesler-plugins.googlecode.com/files/jquery.localscroll-1.2.7-min.js"></script> 
 	   
-		
-		<link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <!-- Load Fonts -->		
+	<link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 
 
 
 <!-- Add CSS styling -->
+
         <style type="text/css">
 		
-		html {
-			background: url('library.jpg') no-repeat center center fixed;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-		}
+	html {
+		background: url('library.jpg') no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
 		
-
         body, p {
-           font-family: 'PT Sans', sans-serif;
-		   color: #222;
-		   	margin: 0;
-			padding: 0;
-			border: none;
-			font-size: 14px;
+		font-family: 'PT Sans', sans-serif;
+		color: #222;
+	   	margin: 0;
+		padding: 0;
+		border: none;
+		font-size: 16px;
         }
 		
-		h1 {
-			font-family: 'Old Standard TT', serrif;
-			font-weight: 500;
-			color: #3d3b3b;
-			font-size: 28px;
-		}
+	h1 {
+		font-family: 'Old Standard TT', serrif;
+		font-weight: 500;
+		color: #3d3b3b;
+		font-size: 28px;
+	}
 
-		h2 {
-			font-family: 'Old Standard TT', serrif;
-			font-weight: 500;
-			color: #3d3b3b;
-			font-size: 18px;
-			margin-bottom: 0px
-		}
+	h2 {
+		font-family: 'Old Standard TT', serrif;
+		font-weight: 500;
+		color: #3d3b3b;
+		font-size: 18px;
+		margin-bottom: 0px
+	}
 
 
         #theory-viewer {
-			//	border: 1px solid red;
                 margin: 50px auto;
-				position:relative;
+		position:relative;
                 width: 1000px;
                 height: 600px;
                 overflow: hidden;
@@ -80,12 +79,12 @@
         }
 
         .theory-section {
-				position: relative;
+		position: relative;
                 color: #000;
-                width: 900px;
+                width: 800px;
                 height: 580px;
-				margin-bottom: 250px;
-				padding: 10px 50px;
+		margin-bottom: 250px;
+		padding: 10px 100px;
                 background:rgba(255,255,255,0.8);
         }
 
@@ -93,9 +92,6 @@
 
 	/* Navigation Styling */
 
-	
-
-	
 	#theory-links {
 
 	height: 55px;
@@ -159,10 +155,10 @@
 	}
 	
 	#theory-links .button:active {
-	background-position: 0 -30px !important;
-	box-shadow: 0 0 0 rgba(0, 0, 0, 0.10);
-    -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.10);
-    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.10);	
+		background-position: 0 -30px !important;
+		box-shadow: 0 0 0 rgba(0, 0, 0, 0.10);
+		-moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.10);
+		-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.10);	
 	}
 	
 
@@ -172,9 +168,6 @@
 		margin-top:20px;
 		}
 	
-
-	
-
 	#theory-links .current a {
 		color:#2676ac;
 		background: #e1f0fa;
@@ -288,38 +281,35 @@
 	}
 	
 	.arrowbutton {
-	width: 30px;
-	height:30px;
+		width: 30px;
+		height:30px;
 
-	border-radius:15px;
-	-moz-border-radius:15px;
-	-webkit-border-radius:15px;
-	-khtml-border-radius:15px;
-	border:#ccc 1px double;
+		border-radius:15px;
+		-moz-border-radius:15px;
+		-webkit-border-radius:15px;
+		-khtml-border-radius:15px;
+		border:#ccc 1px double;
 
-	color:#888;
-	line-height:30px;
-	text-shadow:0 1px 0 #fff;
-	text-decoration:none;
-	text-align:center;
-	background:#ddd
-
-
-	
+		color:#888;
+		line-height:30px;
+		text-shadow:0 1px 0 #fff;
+		text-decoration:none;
+		text-align:center;
+		background:#ddd	
 	}
 
 	.arrow-right:hover,.arrow-left:hover, .arrow-up:hover, .arrow-down:hover {
 		border:#bbb 1px double;
-        background-attachment:inherit;
+		background-attachment:inherit;
 		background-position: 15 12px !important;
 		box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.10);
 		-moz-box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.10);
 		-webkit-box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.10);
 	}
 	
-		.arrow-right:active,.arrow-left:active, .arrow-up:active, .arrow-down:active {
+	.arrow-right:active,.arrow-left:active, .arrow-up:active, .arrow-down:active {
 		border:#bbb 1px double;
-        background-attachment:inherit;
+		background-attachment:inherit;
 		background-position: 15 15px !important;
 		box-shadow: 0 0 0 rgba(0, 0, 0, 0.10);
 		-moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.10);
@@ -714,6 +704,35 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
         <div id="semiotics-problems" class="theory-section problems">
 		<h1>Semiotics</h1>
 		<h2>Problems</h2>
+
+		<p>In Semiotic Engineering Methods, De Souza provides a case study of the application of SIM to
+Audacity, a popular open-source digital audio processing application.</p>
+
+<p>Beginning with the Preparation phase, the researchers identified the intended users by
+investigating materials presented on the Audacity web site, determining their interests and level
+of sophistication. This information was used to produce an inspection scenario – a narrative
+describing a fictional motivation and tasks that are used to contextualize the inspection. In
+this case, the scenario describes a set of tasks related to creating a cell phone ring tone and
+recording the user’s voice.</p>
+
+<p>The first step of SIM is analysis of metalinguistic signs, which includes the web site, software
+start-up welcome message, and various types of documentation. Based on analysis at this level,
+she found inconsistent messages addressed to users – some text assumed they were computer
+illiterate, but familiar with digital audio processing concepts, and other text assumed the reverse.</p>
+
+<p>The second step is the analysis of static signs – elements of the interface which remain
+constant while it is being used. De Souza inferred what designers assumed who the users of
+Audacity are, and their needs and wants, and found that designers were consistent in believing
+users preferred direct manipulation interfaces. In the third step of the analysis, she notes
+several inconsistencies at the level of dynamic signs such as how Import and Open commands
+behave the same, but Save and Export behave differently.</p>
+
+<p>In the remaining steps, De Souza combines the three levels of analysis and finds that the
+interface reveals important insights into the organization of the development team, and also
+notes a lack of consistency across all the levels. The analysis concludes by taking the concrete
+observations found in the analysis segment and showing how they illustrate important aspects
+of the semiotic theory of HCI.</p>
+
                 <a class="arrow-left" onclick="scrollL()"></a>
                 <a class="arrow-right" onclick="scrollR()"></a>
                 <a class="arrow-down" onclick="scrollD()"></a>
@@ -722,6 +741,26 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
         <div id="semiotics-methods" class="theory-section methods">
 		<h1>Semiotics</h1>
 		<h2>Methods</h2>
+
+<p><strong>Semiotic Inspection Method</strong> is a formalized approach to inspecting user interfaces aimed
+at producing valid knowledge rather than opinions. It is focused on the metacommunication
+intended by designers and expressed by the interface. SIM consists of five steps preceded
+by preparation by identifying the research question, the users and the top-level goals of the
+system. The first three steps are iterative and deconstructive, breaking down the design
+message into three classes of signs: metalinguistic signs, which is language that describes
+signs that operate the system, including documentation, error and help messages, tips, etc.;
+static signs which encompass fixed elements of the interface; and dynamic signs, those whose
+meanings develop over time. The fourth step is collate and compare, where the classes of signs
+are evaluated for consistency and completeness, and the fifth step involves evaluating the
+effects of the observations made in step four on the communicability of the system.</p>
+
+<p><strong>Communicability Evaluation Method</strong> is a way to evaluate the way designers’
+metacommunication is received by users. This has some similarities to usability testing, but is
+focused on the consistency and coherence of the communication which may be poor even if the
+task is successful. There are three steps to CEM: tagging, the phase where the researcher tags
+utterances by users while they are using a system of 13 possible tags; interpretation, where the
+researcher analyzes the tags to discover frequency, patterns, grade and cause of problems; and semiotic profile, in which the researcher summarizes and characterizes the metacommunication</p>
+
                 <a class="arrow-left" onclick="scrollL()"></a>
                 <a class="arrow-right" onclick="scrollR()"></a>
                 <a class="arrow-up" onclick="scrollU()"></a>
@@ -746,14 +785,14 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
 		<li><strong>Social loafing</strong> states that when output consequences are diluted among team members, individuals will be less likely to contribute as the reward for their input will not be given to them directly, but disstributed to the team.</li>
 		</ul>
 
-		<h2>Pro</h2>
+		<h2>Strengths</h2>
 		<ul>
 		<li>Social psychology has a rich history dating back over a century that can be applied to current problems in HCI.</li>
 		<li>Researchers do not need to adhere to an overarching complete theory in order to use parts of social pscyhology.</li>
 		</ul>
 
 
-		<h2>Con</h2>
+		<h2>Weaknesses</h2>
 		<ul>
 		<li>Does not provide an overarching guiding theory</li>
 		<li>Can be hard to predict what interventions to implement</li>
