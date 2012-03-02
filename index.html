@@ -37,8 +37,17 @@
         body, p {
 		font-family: 'PT Sans', sans-serif;
 		color: #222;
-	   	margin: 0;
-		padding: 0;
+		margin: 0px;
+		padding: 0px;
+		border: none;
+		font-size: 16px;
+        }
+
+        .theory-section p {
+		font-family: 'PT Sans', sans-serif;
+		color: #222;
+		margin: 0px;
+		padding-top: 10pt;
 		border: none;
 		font-size: 16px;
         }
@@ -48,6 +57,7 @@
 		font-weight: 500;
 		color: #3d3b3b;
 		font-size: 28px;
+		margin-bottom: 0pt;
 	}
 
 	h2 {
@@ -81,10 +91,10 @@
         .theory-section {
 		position: relative;
                 color: #000;
-                width: 800px;
+                width: 850px;
                 height: 580px;
 		margin-bottom: 250px;
-		padding: 10px 100px;
+		padding: 10px 75px;
                 background:rgba(255,255,255,0.8);
         }
 
@@ -515,15 +525,17 @@
         <div id="intro" class="theory-section overview">
                 <h1>Intro to Theory</h1>
 
-		<p>Here is a description of why we have created this project. Namely, to describe what theory does for the field of HCI.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed diam aliquet nisl malesuada pretium. Quisque ut fermentum velit. Nunc sed lorem sed enim sagittis egestas. Mauris fringilla varius consectetur. Maecenas semper leo sed est placerat lobortis. Aliquam auctor mi rutrum tellus ultricies non elementum lacus semper. Duis vestibulum volutpat ante, vitae feugiat mauris bibendum a. Duis at metus massa, imperdiet tincidunt diam. Nunc ullamcorper nisi ut diam pharetra semper.
-</p><p>
-Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesent nec tortor ipsum, sit amet rutrum sem. Quisque vestibulum erat nisl. Nulla nec nisi nibh, id placerat libero. Aenean porttitor dolor at lorem fringilla eu mollis odio lacinia. Aenean et massa leo, vitae feugiat erat. Mauris id urna at nisi aliquet pretium sed in tortor.
-             </p>
+		<p>Untold hours go into debating and learning theories. Schools are filled with students memorizing models, and debating diagrams designed to make sense of the world. Even apart from academia, bookstores are filled with volumes proposing various theories for the everyday learner. The sheer amount of effort spent developing and learning theories before even applying them should give us pause. What is all the knowledge-work for? Why not simply jump straight into doing?</p>
 
-		<h1>About this page</h1>
+<p>In our final reading for HCDE 501, Halverson posited a four-fold purpose for theories; they must be descriptive, rhetorical, inferential, and applicable. Thomas Kuhn in his landmark The Structure of Scientific Revolutions explains the need for paradigmatic theories to guide inquiry. Theories, in their explanation of the world seem to provide two major functions:
+Determining what problems people in a specific field can attempt to solve
+Proposing ways to go about solving those problems</p>
 
-		<p>This page is meant for you to explore the major theories in HCI and their connections. Feel free to navigate using the on-screen arrows, or the arrow-keys on your keyboard </p>
+
+<h1>About this page</h1>
+<p>This page is meant to provide learners of all types with a unique way to explore the major theories of Human Computer Interaction. Each theory is detailed with an overview, listing of people involved in developing and perpetuating the theory, major problems the theory attempts to solve, and the ways in which that theory solves them.</p>
+
+<p>Feel free to click around and navigate either by the in-page arrows, or the arrow keys on your keyboard. Enjoy!</p>
 
 		<a  class="arrow-right"  onclick="scrollR()"></a>
 		<a class="arrow-down" onclick="scrollD()"></a>
@@ -531,12 +543,19 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
 
         <div id="major-figures" class="theory-section people">
                 <h1>Major Figures</h1>
+		<ul>
+		<li><strong>Robert Kraut</strong> - American social psychologist who applies psychology to the design of digital systems.</li>
+		<li><strong>Bill Buxton</strong> - Canadian designer who researches and designs novel forms of interaction.</li>
+		<li><strong>Edwin Hutchins</strong> - American cognitive scientist who founded distributed cognition</li>
+		<li><strong>Bruno Latour</strong> - French sociologist who helped develop and promote actor-network theory.</li>
+		<li><strong>Herbert Simon</strong> - American polymath who pioneered computer science as a science of the artifical.</li>
+		<li><strong>Sherry Turkle</strong> - American social scientist studying the social consequences of technology</li>
+		<li><strong>Andrew Feenberg</strong> - Canadian philosopher of technology</li>
+		<li><strong>Lucy Suchman</strong> - American anthropologist whose work sparked HCI’s shift to postcognitivist theory</li>
+		<li><strong>Clifford Geertz</strong> - American anthropologist know for his “thick descriptions” and symboloic anthropology</li>
+		</ul>
 
-		<p>Here is a description of the major figures.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed diam aliquet nisl malesuada pretium. Quisque ut fermentum velit. Nunc sed lorem sed enim sagittis egestas. Mauris fringilla varius consectetur. Maecenas semper leo sed est placerat lobortis. Aliquam auctor mi rutrum tellus ultricies non elementum lacus semper. Duis vestibulum volutpat ante, vitae feugiat mauris bibendum a. Duis at metus massa, imperdiet tincidunt diam. Nunc ullamcorper nisi ut diam pharetra semper.
-</p><p>
-Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesent nec tortor ipsum, sit amet rutrum sem. Quisque vestibulum erat nisl. Nulla nec nisi nibh, id placerat libero. Aenean porttitor dolor at lorem fringilla eu mollis odio lacinia. Aenean et massa leo, vitae feugiat erat. Mauris id urna at nisi aliquet pretium sed in tortor.
-             </p>
+
                 <a class="arrow-up" onclick="scrollU()"></a>
                 <a class="arrow-right" onclick="scrollR()"></a>
                 <a class="arrow-down" onclick="scrollD()"></a>
@@ -571,10 +590,7 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
         <div id="cognitive-science-overview" class="theory-section overview">
                 <h1>Cognitive Science</h1>
 		<h2>Overview</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed diam aliquet nisl malesuada pretium. Quisque ut fermentum velit. Nunc sed lorem sed enim sagittis egestas. Mauris fringilla varius consectetur. Maecenas semper leo sed est placerat lobortis. Aliquam auctor mi rutrum tellus ultricies non elementum lacus semper. Duis vestibulum volutpat ante, vitae feugiat mauris bibendum a. Duis at metus massa, imperdiet tincidunt diam. Nunc ullamcorper nisi ut diam pharetra semper.
-</p><p>
-Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesent nec tortor ipsum, sit amet rutrum sem. Quisque vestibulum erat nisl. Nulla nec nisi nibh, id placerat libero. Aenean porttitor dolor at lorem fringilla eu mollis odio lacinia. Aenean et massa leo, vitae feugiat erat. Mauris id urna at nisi aliquet pretium sed in tortor.
-             </p>
+
                 <a class="arrow-left" onclick="scrollL()"></a>
                 <a class="arrow-right" onclick="scrollR()"></a>
                 <a class="arrow-down" onclick="scrollD()"></a>
@@ -652,6 +668,26 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
         <div id="activity-theory-overview" class="theory-section overview">
 		<h1>Activity Theory</h1>
 		<h2>Overview</h2>
+		<p>Activity theory is a theoretical perspective that originated in the Soviet Union in the 1920s. In the early 1990s, it was proposed as a foundational theory for guiding HCI research beyond cognitive science. One important principle that activity theory introduces is the idea of consciousness or cognition embedded in activities that individuals perform, rather than solely locating it inside the brain.</p>
+
+		<h2>Central Tenets</h2>	
+		<ul>
+		<li>An emphasis on human intentionality</li>
+		<li>Asymmetry of people and things</li>
+		<li>Importance of human development, temporality</li>
+		<li>The idea of culture and society shaping human activity</li>
+		</ul>
+
+
+		<h2>Strengths and Weaknesses</h2>
+		<ul>
+		<li>Highly descriptive language for analyzing systems</li>
+		<li>Describes different levels of agency for humans and non-humans</li>
+		<li>While highly descriptive, not very perspective for systems design</li>
+		<li>High barrier to learning the theory before applying it</li>
+		</ul>
+	
+
                 <a class="arrow-left" onclick="scrollL()"></a>
                 <a class="arrow-right" onclick="scrollR()"></a>
                 <a class="arrow-down" onclick="scrollD()"></a>
@@ -659,6 +695,14 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
         <div id="activity-theory-people" class="theory-section people">
 		<h1>Activity Theory</h1>
 		<h2>People</h2>
+		<ul>
+		<li><strong>Aleksei Leontiev</strong> - Soviet development psychologist & founder of activity theory</li>
+		<li><strong>Susanne Bødker</strong> - Danish HCI researcher who introduced the field to activity theory while working at Xerox PARC in the late 80s and early 90s</li>
+		<li><strong>Bonnie Nardi</strong> - leading proponent of activity theory</li>
+		<li><strong>Victor Kaptelinin</strong> - leading proponent of activity theory</li>
+		<li><strong>Engström</strong> - Scandinavian activity theorist particularly interested in groups</li>
+		</ul>
+
                 <a class="arrow-left" onclick="scrollL()"></a>
                 <a class="arrow-right" onclick="scrollR()"></a>
                 <a class="arrow-down" onclick="scrollD()"></a>
@@ -689,6 +733,31 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
         <div id="semiotics-overview" class="theory-section overview">
 		<h1>Semiotics</h1>
 		<h2>Overview</h2>
+
+		<p>Semiotic engineering began as an approach for designing the language of user interfaces and was rooted in research conducted in the 1980s by Brazilian HCI researchers. In 2005, de Souza published The Semiotic Engineering of Human-Computer Interaction outlining a complete
+semiotic approach to HCI. Semiotics is the study of signs and signification, so this theory views
+technological products as forms of communication which are interpreted by users.</p>
+
+		<h2>Central Tenets </h2>
+		<ul>
+		<li>Interfaces are a medium of communication between interlocuters</li>
+		<li>The principle interlocuters in a computer system are users and designers</li>
+		<li>Communication occurs at interaction time</li>
+		<li>The computer system functions as the designer’s deputy</li>
+		<li>Unlimited semiosis – the capacity of meaning of signifiers to evolve and change</li>
+		<li>Interaction is a form of metacommunication – communication from designers about the way users can communicate to the system</li>
+		</ul>
+
+		<h2>Strengths and Weaknesses</h2>
+		<ul>
+		<li>Accounts for the designer and their relationship to the user</li>
+		<li>Incorporates social and cultural influences in the meaning making process</li>
+		<li>Minimally prescriptive in guiding system dsign, mainly descriptive</li>
+		<li>Not widely accepted in guiding HCI research</li>
+		</ul>
+
+
+
                 <a class="arrow-left" onclick="scrollL()"></a>
                 <a class="arrow-right" onclick="scrollR()"></a>
                 <a class="arrow-down" onclick="scrollD()"></a>
@@ -696,6 +765,13 @@ Phasellus consequat urna eu nisl volutpat at blandit ligula condimentum. Praesen
         <div id="semiotics-people" class="theory-section people">
 		<h1>Semiotics</h1>
 		<h2>People</h2>
+
+		<ul>
+		<li><strong>Clarisse Sieckenius de Souza</strong> - founder of Semiotic Engineering</li>
+		<li><strong>Carla Leitão</strong> - co-author with de Souza of Semiotic Engineering Methods for Scientific Research in HCI</li>
+		<li><strong>Peter Bøgh Andersen</strong> - a leading researcher in the field of computer semiotics who influenced de Souza</li>
+		</ul>
+
                   <a class="arrow-left" onclick="scrollL()"></a>
                 <a class="arrow-right" onclick="scrollR()"></a>
                 <a class="arrow-down" onclick="scrollD()"></a>
@@ -778,23 +854,18 @@ researcher analyzes the tags to discover frequency, patterns, grade and cause of
 
 		<p>Social psychology is a sub-field of psychology which studies the effect of social interactions on group and individual behavior. While not native to HCI, social psychology has been widely applied to the field, especially in the study of Computer-Supported Cooperative Work (CSCW). Rather than being a single, unified theory like activity theory or distributed cognition, social psychology refers to a group of loosely tied theories which make observations and predictions about group behavior.</p>
 
-		<h2>Central Tenants</h2>
+		<h2>Central Tenets</h2>
 		<ul>
-		<li><strong>The Input-Process-Output Model</strong> states that inputs of personnel, tasks and tools are processed by a group using interaction patterns, roles and strategy, leading to outputs of production, meeting member needs, and maintaining group cohesion. Changes to inputs and processing methods lead to changes in outputs.</li>
-		<li><strong>Process losses</strong> are output losses due to  mis-coordination and motivation losses. One example is production blocking where allowing for only one group member to contribute at a time blocks any other group members from being productive.</li>
-		<li><strong>Social loafing</strong> states that when output consequences are diluted among team members, individuals will be less likely to contribute as the reward for their input will not be given to them directly, but disstributed to the team.</li>
+		<li><strong>The Input-Process-Output Model</strong> states that inputs of personnel, tasks and tools are processed by a group using interaction patterns, roles and strategy, leading to outputs of production, meeting member needs, and maintaining group cohesion.</li>
+		<li><strong>Process losses</strong> are output losses due to  mis-coordination and motivation losses.</li>
+		<li><strong>Social loafing</strong> occurs when when output consequences are diluted among team members, individuals will be less likely to contribute as the reward for their input will not be given to them directly, but disstributed to the team.</li>
 		</ul>
 
-		<h2>Strengths</h2>
+		<h2>Strengths and Weaknesses</h2>
 		<ul>
-		<li>Social psychology has a rich history dating back over a century that can be applied to current problems in HCI.</li>
-		<li>Researchers do not need to adhere to an overarching complete theory in order to use parts of social pscyhology.</li>
-		</ul>
-
-
-		<h2>Weaknesses</h2>
-		<ul>
-		<li>Does not provide an overarching guiding theory</li>
+		<li>Has a rich history dating back over a century that can be applied to current problems in HCI.</li>
+		<li>Researchers can apply its findings in a number of frameworks since it does not require adherence to an overarching theory</li>
+		<li>Does not provide an overarching guiding theory</li> 
 		<li>Can be hard to predict what interventions to implement</li>
 		</ul>
 
@@ -806,10 +877,10 @@ researcher analyzes the tags to discover frequency, patterns, grade and cause of
 		<h2>People</h2>
 
 		<ul>
-		<li><strong>Kurt Lewin</strong> - Father of Social Psychology</li>
-		<li><strong>Robert Kraut</strong> - Pioneer in applying social psychology to HCI</li>
-		<li><strong>Sherry Turkle</strong> - Explanation here</li>
-		<li><strong>Andrew Feenberg</strong> - Explanation here</li>
+		<li><strong>Kurt Lewin</strong> - Father of social psychology</li>
+		<li><strong>Robert Kraut</strong> - Major applier of SP to HCI</li>
+		<li><strong>Norman Triplett</strong> - Conducted the first study in social psychology</li>
+		<li><strong>Wanda Orlikowsi</strong> - American information scientist studying organizational structure</li>
 		</ul>
 
                 <a class="arrow-left" onclick="scrollL()"></a>
