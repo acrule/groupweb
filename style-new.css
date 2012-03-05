@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,700);
+
 	html {
 		background: url('library.jpg') no-repeat center center fixed;
 		-webkit-background-size: cover;
@@ -8,11 +10,11 @@
 		
         body, p {
 		font-family: Georgia, 'PT Sans', sans-serif;
-		color: #333;
+		color: #444;
 		margin: 0px;
 		padding: 0px;
 		font-size: 14px;
-		line-height: 1.4em;
+		line-height: 1.5em;
         }
 
         .theory-section p {
@@ -20,20 +22,24 @@
 		margin: 0px;
 		margin-bottom: 1rem;
 		border: none;
+		text-indent: 1rem;
         }
 		
 	h1 {
-		font-family: 'Old Standard TT', serrif;
-		font-weight: 500;
-		color: #000;
+		font-family: 'Crimson Text', serrif;
+		font-weight: bold;
+		color: #333;
 		font-size: 28px;
 		margin: 0 0 1rem 0;
+		text-transform: uppercase;
+		letter-spacing: 0.09em;
+		margin-top: 10px;
 	}
 
 	h2 {
-		font-family: 'Old Standard TT', serrif;
+		font-family: 'Crimson Text', serrif;
 		font-weight: 500;
-		color: #000;
+		color: #333;
 		font-size: 22px;
 		margin-bottom: 1rem
 	}
@@ -63,7 +69,7 @@
 
         .theory-section {
 		position: relative;
-                color: #000;
+                color: #333;
                 height: 480px;
 		margin-bottom: 250px;
 		padding: 60px 120px;
@@ -80,13 +86,10 @@
 	position:relative;
 	left: 0;
 	width: 100%;
-	box-shadow: 0 0 50px #242424;
-	-webkit-box-shadow: 0 0 50px #242424;
-	-moz-box-shadow: 0 0 50px #242424;
 	margin: 0 auto;	
 	margin-bottom: 0px;
 	padding: 0;
-	background:rgba(255,255,255,0.95);
+	background:rgba(255,255,255,0.5);
 	z-index:3;
 
 	}
@@ -106,12 +109,13 @@
 
 		overflow: hidden;
 		margin: 105px 8px 0px 0px;
-		border: 1px solid #ececec;
+		border: 3px double #ccc;
 		text-align:justify;
 		text-decoration: none;
-		font-size: 18px;
+		font-size: 14px;
+		font-weight: bold;
 		color: #333;
-		padding: 5px;
+		padding: 5px 9px;
 		background:rgba(255,255,255,0.95);
 
 		line-height:50%;
@@ -120,20 +124,15 @@
 		-o-transition: all 100ms linear;
 		-ms-transition: all 100ms linear;
 		transition: all 100ms linear;
-		box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
-		-moz-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
-		-webkit-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
 	
 	}
 	
 	#theory-links .button:hover {
 		color:#2676ac;
 		background: #e1f0fa;
+		border-color: #c1d0da;
 
 		background-position: 0 -10px !important;
-		box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.10);
-		-moz-box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.10);
-		-webkit-box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.10);
 	}
 	
 	#theory-links .button:active {
@@ -157,22 +156,20 @@
 
 
 	/*Navigation arrow styling */
-	.arrow-left {
-		position: absolute;
-		left: 5px;
-		top: 287px;
-		z-index: 2;
-		width: 40px;
-		height:40px;
 
-		border-radius:20px;
-		-moz-border-radius:20px;
-		-webkit-border-radius:20px;
-		-khtml-border-radius:20px;
-		border:#ccc 1px double;
+	.arrow-left,
+	.arrow-right,
+	.arrow-down,
+	.arrow-up {
+
+		border-radius:100px;
+		-moz-border-radius:100px;
+		-webkit-border-radius:100px;
+		-khtml-border-radius:100px;
+		border:4px #ccc double;
 		background: #fff url("arrow_left.png");
 		background-repeat:no-repeat;
-		background-position:center; 
+		background-position:center;
 		-webkit-transition: all 100ms linear;
 		-moz-transition: all 100ms linear;
 		-o-transition: all 100ms linear;
@@ -182,84 +179,44 @@
 		-moz-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
 		-webkit-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
 	}
-
-	.arrow-right {
+	.arrow-left {
 		position: absolute;
-		right: 5px;
+		left: 10px;
 		top: 287px;
 		z-index: 2;
 		width: 40px;
 		height:40px;
+	}
 
-		border-radius:20px;
-		-moz-border-radius:20px;
-		-webkit-border-radius:20px;
-		-khtml-border-radius:20px;
-		border:#ccc 1px double;
-		background: #fff url("arrow_right.png");
-		background-repeat:no-repeat;
-		background-position:center; 
-		-webkit-transition: all 100ms linear;
-		-moz-transition: all 100ms linear;
-		-o-transition: all 100ms linear;
-		-ms-transition: all 100ms linear;
-		transition: all 100ms linear;
-		box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
-		-moz-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
-		-webkit-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
-
+	.arrow-right {
+		position: absolute;
+		right: 10px;
+		top: 287px;
+		z-index: 2;
+		width: 40px;
+		height:40px;
+		background-image: url("arrow_right.png");
 	}
 
 	.arrow-up {
 		position: absolute;
 		right: 500px;
-		top: 5px;
+		top: 10px;
 		z-index: 2;
 		width: 40px;
 		height:40px;
-
-		border-radius:20px;
-		-moz-border-radius:20px;
-		-webkit-border-radius:20px;
-		-khtml-border-radius:20px;
-		border:#ccc 1px double;
-		background: #fff url("arrow_up.png");
-		background-repeat:no-repeat;
-		background-position:center; 
-		-webkit-transition: all 100ms linear;
-		-moz-transition: all 100ms linear;
-		-o-transition: all 100ms linear;
-		-ms-transition: all 100ms linear;
-		transition: all 100ms linear;
-		box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
-		-moz-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
-		-webkit-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
+		background-image:url("arrow_up.png");
 	}
 
 	.arrow-down {
 		position: absolute;
 		right: 500px;
-		bottom: 5px;
+		bottom: 10px;
 		z-index: 2;
 		width: 40px;
 		height:40px;
+		background-image:url("arrow_down.png");
 
-		border-radius:20px;
-		-moz-border-radius:20px;
-		-webkit-border-radius:20px;
-		-khtml-border-radius:20px;
-		border:#ccc 1px double;
-		background: #fff url("arrow_down.png");
-		background-repeat:no-repeat;
-		background-position:center; 
-		-webkit-transition: all 100ms linear;
-		-moz-transition: all 100ms linear;
-		-o-transition: all 100ms linear;
-		-ms-transition: all 100ms linear;
-		transition: all 100ms linear;
-		box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
-		-moz-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
-		-webkit-box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.10);
 	}
 	
 	.arrowbutton {
@@ -281,7 +238,7 @@
 	}
 
 	.arrow-right:hover,.arrow-left:hover, .arrow-up:hover, .arrow-down:hover {
-		border:#bbb 1px double;
+		border:#bbb 4px double;
 		background-attachment:inherit;
 		background-position: 15 12px !important;
 		box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.10);
@@ -290,7 +247,7 @@
 	}
 	
 	.arrow-right:active,.arrow-left:active, .arrow-up:active, .arrow-down:active {
-		border:#bbb 1px double;
+		border:#bbb 4px double;
 		background-attachment:inherit;
 		background-position: 15 15px !important;
 		box-shadow: 0 0 0 rgba(0, 0, 0, 0.10);
@@ -300,14 +257,12 @@
 
 	/* Content section styling */
         .overview {
-		background-image: url("idea.png");
 		background-repeat: no-repeat;
 		background-position: 95% 80% ;
         }
 
 
         .people {
-		background-image: url("people.png");
 		background-repeat: no-repeat;
 		background-position: 90% 80% ;
         }
@@ -323,13 +278,11 @@
         }
 
         .problems {
-		background-image: url("problem.png");
 		background-repeat: no-repeat;
 		background-position: 95% 80% ;
         }
 
         .methods {
-		background-image: url("method.png");
 		background-repeat: no-repeat;
 		background-position: 95% 80% ;
         }
