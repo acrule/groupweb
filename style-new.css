@@ -260,14 +260,17 @@
 
 	/* Content section styling */
         .overview {
+		background-image: url('icons-overview.png');
 		background-repeat: no-repeat;
-		background-position: 95% 80% ;
+		background-position: 5% 13% ;
+		
         }
 
 
         .people {
+		background-image: url('icons-people.png');
 		background-repeat: no-repeat;
-		background-position: 90% 80% ;
+		background-position: 5% 13% ;
         }
 
         .people a:link, a:visited {
@@ -281,11 +284,13 @@
         }
 
         .problems {
+		background-image: url('icons-problems.png');
 		background-repeat: no-repeat;
-		background-position: 95% 80% ;
+		background-position: 5% 13% ;
         }
 
         .methods {
+		background-image: url('icons-methods.png');
 		background-repeat: no-repeat;
-		background-position: 95% 80% ;
+		background-position: 5% 13% ;
         }
