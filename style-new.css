@@ -6,6 +6,7 @@
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
+		width:100%
 	}
 		
         body, p {
@@ -95,10 +96,12 @@
 	}
 
 	#theory-links ul{
-		width: 1000px;
+		width: 1050px;
 		position:relative;
 		margin: 0px auto;
+		margin-right:410px;
 		padding: 0;
+		
 		list-style: none;
 	}	
 
