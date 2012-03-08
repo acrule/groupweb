@@ -294,3 +294,10 @@
 		background-repeat: no-repeat;
 		background-position: 5% 13% ;
         }
+
+        .references {
+        	overflow-y: scroll;
+        	height: 400px;
+        }
+
+        .references p { text-indent: -14px; margin-left: 14px;}
